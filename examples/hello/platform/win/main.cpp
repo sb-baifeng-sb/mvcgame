@@ -20,8 +20,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 	Application app(std::move(bridge));
 
-	std::unique_ptr<mvcgame::FileStreamLoader> fs(new mvcgame::FileStreamLoader(app.getBridge().getFilesystem()));
-    fs->addPath("../../../examples/hello/resources");
+	//std::unique_ptr<mvcgame::FileStreamLoader> fs(new mvcgame::FileStreamLoader(app.getBridge().getFilesystem()));
+    //fs->addPath("../../../examples/hello/resources");
     //app.getAssets().addStreamLoader(std::move(fs));
 
     app.run();

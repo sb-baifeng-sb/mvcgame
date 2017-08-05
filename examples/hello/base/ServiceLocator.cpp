@@ -20,7 +20,7 @@ ServiceLocator::ServiceLocator()
     _textures.setStreamManager(_assetStreams);
     _textureAtlases.setStreamManager(_assetStreams);
     _fontAtlases.setStreamManager(_assetStreams);
-    _skeletons.setStreamManager(_assetStreams);    
+    _skeletons.setStreamManager(_assetStreams);
 
     _textures.add(std::unique_ptr<PngTextureLoader>(new PngTextureLoader()), "png");
 

@@ -10,3 +10,4 @@ bin
 /proj/vstudio2012/Debug/*
 /proj/vstudio2012/ipch/*
 *.sdf
+*.opensdf

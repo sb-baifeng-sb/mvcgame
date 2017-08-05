@@ -85,6 +85,15 @@
     <Filter Include="Archivos de encabezado\util">
       <UniqueIdentifier>{4656dd25-99a7-4bfc-906f-60cad0d221fc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de código fuente\skeleton">
+      <UniqueIdentifier>{943357a4-d304-40ad-b27c-01f9376e4ea7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Third">
+      <UniqueIdentifier>{3c90160b-1d8a-4a0a-8d07-d9a07055548a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Third\spine">
+      <UniqueIdentifier>{884a8e80-0874-41bc-83d5-3f2882e25740}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\mvcgame\action\ActionRunner.cpp">
@@ -189,6 +198,87 @@
     <ClCompile Include="..\..\..\src\mvcgame\util\StringUtils.cpp">
       <Filter>Archivos de código fuente\util</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\asset\AssetStreamManager.cpp">
+      <Filter>Archivos de código fuente\asset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\skeleton\SpineSkeletonLoader.cpp">
+      <Filter>Archivos de código fuente\skeleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\skeleton\SpineSkeleton.cpp">
+      <Filter>Archivos de código fuente\skeleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\texture\CocosTextureAtlasLoader.cpp">
+      <Filter>Archivos de código fuente\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\SpineSkeletonView.cpp">
+      <Filter>Archivos de código fuente\view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontRegion.cpp">
+      <Filter>Archivos de código fuente\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontAtlasPage.cpp">
+      <Filter>Archivos de código fuente\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontLetter.cpp">
+      <Filter>Archivos de código fuente\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\SlotData.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Animation.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\AnimationState.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\AnimationStateData.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Atlas.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\AtlasAttachmentLoader.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Attachment.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\AttachmentLoader.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Bone.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\BoneData.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\extension.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Json.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\RegionAttachment.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Skeleton.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\SkeletonData.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\SkeletonJson.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Skin.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Slot.c">
+      <Filter>Third\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\platform\IRenderBridge.cpp">
+      <Filter>Archivos de código fuente\platform</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\mvcgame\action\ActionRunner.hpp">
@@ -229,9 +319,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\src\mvcgame\view\View.hpp">
       <Filter>Archivos de encabezado\view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetsManager.hpp">
-      <Filter>Archivos de encabezado\asset</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\mvcgame\controller\BaseViewController.hpp">
       <Filter>Archivos de encabezado\controller</Filter>
@@ -311,12 +398,6 @@
     <ClInclude Include="..\..\..\src\mvcgame\texture\SpriteSheet.hpp">
       <Filter>Archivos de encabezado\texture</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetTypeManager.hpp">
-      <Filter>Archivos de encabezado\asset</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\asset\BaseAssetsManager.hpp">
-      <Filter>Archivos de encabezado\asset</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\src\mvcgame\asset\FileStreamLoader.hpp">
       <Filter>Archivos de encabezado\asset</Filter>
     </ClInclude>
@@ -328,6 +409,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\src\mvcgame\util\StringUtils.hpp">
       <Filter>Archivos de encabezado\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\spine\src\spine\Json.h">
+      <Filter>Third\spine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

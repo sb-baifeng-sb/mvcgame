@@ -22,7 +22,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 	std::unique_ptr<mvcgame::FileStreamLoader> fs(new mvcgame::FileStreamLoader(app.getBridge().getFilesystem()));
     fs->addPath("../../../examples/hello/resources");
-    app.getAssets().addStreamLoader(std::move(fs));
+    //app.getAssets().addStreamLoader(std::move(fs));
 
     app.run();
 

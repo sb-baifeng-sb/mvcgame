@@ -41,7 +41,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)/../../src;$(SolutionDir)/../../lib/spine/include;$(SolutionDir)/../../lib/platform/win/libpng/include;$(SolutionDir)/../../lib/platform/win/libzlib/include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)/../../src;$(SolutionDir)/../../lib;$(SolutionDir)/../../lib/spine/include;$(SolutionDir)/../../lib/libpng/include;$(SolutionDir)/../../lib/libzlib/include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)/../../lib/libzlib/lib;$(SolutionDir)/../../lib/libpng/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -53,6 +54,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>MVCGAME_PLATFORM_WIN;_ALLOW_KEYWORD_MACROS;constexpr;WIN32;_DEBUG;_WINDOWS;_USRDLL;MVCGAME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -77,8 +80,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Animation.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\AnimationState.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\AnimationStateData.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Atlas.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\AtlasAttachmentLoader.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Attachment.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\AttachmentLoader.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Bone.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\BoneData.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\extension.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Json.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\RegionAttachment.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Skeleton.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\SkeletonData.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\SkeletonJson.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Skin.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\Slot.c" />
+    <ClCompile Include="..\..\..\lib\spine\src\spine\SlotData.c" />
     <ClCompile Include="..\..\..\src\mvcgame\action\ActionRunner.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\action\TweenAction.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\asset\AssetStreamManager.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\asset\FileStreamLoader.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\base\Application.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\base\Color.cpp" />
@@ -92,11 +114,18 @@
     <ClCompile Include="..\..\..\src\mvcgame\event\Events.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\font\FntFontAtlasLoader.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\font\FontAtlas.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontAtlasPage.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\font\FontInfo.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontLetter.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontRegion.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\font\FontSheet.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\platform\dx\RenderBridge.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\platform\IRenderBridge.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\platform\win\ApplicationBridge.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\platform\win\FilesystemBridge.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\skeleton\SpineSkeleton.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\skeleton\SpineSkeletonLoader.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\texture\CocosTextureAtlasLoader.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\texture\GdxTextureAtlasLoader.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\texture\PngTextureLoader.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\texture\SpriteFrame.cpp" />
@@ -108,17 +137,16 @@
     <ClCompile Include="..\..\..\src\mvcgame\view\BaseView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\ColorView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\RootView.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\view\SpineSkeletonView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\Sprite.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\TextView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\View.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\lib\spine\src\spine\Json.h" />
     <ClInclude Include="..\..\..\src\mvcgame\action\ActionRunner.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\action\IAction.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\action\TweenAction.hpp" />
-    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetsManager.hpp" />
-    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetTypeManager.hpp" />
-    <ClInclude Include="..\..\..\src\mvcgame\asset\BaseAssetsManager.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\asset\FileStreamLoader.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\asset\IAssetLoader.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\asset\IStreamLoader.hpp" />

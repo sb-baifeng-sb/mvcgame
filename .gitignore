@@ -7,4 +7,5 @@ install_manifest.txt
 bin
 /proj/vstudio2012/mvcgame/Debug/*
 /proj/vstudio2012/hello/Debug/*
+/proj/vstudio2012/Debug/*
 /proj/vstudio2012/ipch/*

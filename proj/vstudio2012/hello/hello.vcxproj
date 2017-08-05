@@ -39,14 +39,15 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)..\..\examples;$(SolutionDir)..\..\src;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(SolutionDir)..\..\lib\platform\win\libpng;$(SolutionDir)..\..\lib\platform\win\libzlib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <IncludePath>$(SolutionDir)..\..\lib\spine\include;$(SolutionDir)..\..\examples;$(SolutionDir)..\..\src;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\lib\libpng\lib;$(SolutionDir)..\..\lib\libzlib\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -68,8 +69,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\examples\hello\asset\AssetsManager.cpp" />
     <ClCompile Include="..\..\..\examples\hello\base\Application.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\base\ServiceLocator.cpp" />
     <ClCompile Include="..\..\..\examples\hello\controller\MainController.cpp" />
     <ClCompile Include="..\..\..\examples\hello\platform\win\main.cpp" />
   </ItemGroup>
@@ -79,7 +80,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\examples\hello\asset\AssetsManager.hpp" />
     <ClInclude Include="..\..\..\examples\hello\base\Application.hpp" />
     <ClInclude Include="..\..\..\examples\hello\controller\MainController.hpp" />
   </ItemGroup>

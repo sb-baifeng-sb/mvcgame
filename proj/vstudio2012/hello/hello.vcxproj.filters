@@ -42,8 +42,8 @@
     <ClCompile Include="..\..\..\examples\hello\base\Application.cpp">
       <Filter>Archivos de código fuente\base</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\examples\hello\asset\AssetsManager.cpp">
-      <Filter>Archivos de código fuente\asset</Filter>
+    <ClCompile Include="..\..\..\examples\hello\base\ServiceLocator.cpp">
+      <Filter>Archivos de código fuente\base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,9 +52,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\examples\hello\base\Application.hpp">
       <Filter>Archivos de encabezado\base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\examples\hello\asset\AssetsManager.hpp">
-      <Filter>Archivos de encabezado\asset</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

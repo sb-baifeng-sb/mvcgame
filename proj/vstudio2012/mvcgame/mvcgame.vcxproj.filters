@@ -108,9 +108,6 @@
     <ClCompile Include="..\..\..\src\mvcgame\controller\ViewController.cpp">
       <Filter>Archivos de código fuente\controller</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\asset\AssetsManager.cpp">
-      <Filter>Archivos de código fuente\asset</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\src\mvcgame\controller\BaseViewController.cpp">
       <Filter>Archivos de código fuente\controller</Filter>
     </ClCompile>
@@ -185,9 +182,6 @@
     </ClCompile>
     <ClCompile Include="..\..\..\src\mvcgame\texture\SpriteSheet.cpp">
       <Filter>Archivos de código fuente\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\asset\BaseAssetsManager.cpp">
-      <Filter>Archivos de código fuente\asset</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\src\mvcgame\asset\FileStreamLoader.cpp">
       <Filter>Archivos de código fuente\asset</Filter>

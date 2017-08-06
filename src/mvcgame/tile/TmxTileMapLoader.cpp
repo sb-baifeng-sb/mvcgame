@@ -29,8 +29,9 @@ namespace mvcgame {
             doc.parse<0>(&buffer[0]);
         }
 
-        bool loadExternalTileSet(std::istream& in, TileSet& tileSet)
+        bool loadExternalTileSet(AssetStreamParam& param, TileSet& tileSet)
         {
+			std::istream& in = param.input;
             xml_document<> doc;
             XmlBuffer buffer;
             loadXmlDocument(doc, in, buffer);
@@ -144,7 +145,8 @@ namespace mvcgame {
             DataType type = DataType::Unknown;
             if(attr)
             {
-                data.erase(std::remove_if(data.begin(), data.end(), std::ptr_fun<int, int>(std::isspace)), data.end());
+				//编译不通过，先注释掉
+                //data.erase(std::remove_if(data.begin(), data.end(), std::ptr_fun<int, int>(std::isspace)), data.end());
                 std::string enc = attr->value();  
                 if(enc == "base64")
                 {
@@ -262,16 +264,18 @@ namespace mvcgame {
         {
         }
 
-        bool validate(std::istream& input)
+        bool validate(AssetStreamParam& param)
         {
+			std::istream& input = param.input;
             xml_document<> doc;
             XmlBuffer buffer;
             loadXmlDocument(doc, input, buffer);
             return std::string(doc.first_node()->name()) == "map";
         }
 
-        std::shared_ptr<TileMap> load(std::istream& input)
+        std::shared_ptr<TileMap> load(AssetStreamParam& param)
         {
+			std::istream& input = param.input;
             xml_document<> doc;
             XmlBuffer buffer;
             loadXmlDocument(doc, input, buffer);
@@ -307,16 +311,16 @@ namespace mvcgame {
         _textureManager = &mng;
     }
 
-    bool TmxTileMapLoader::validate(std::istream& input) const
+    bool TmxTileMapLoader::validate(AssetStreamParam& param) const
     {
         TmxTileMapLoaderBridge bridge(_streamManager, _textureManager);
-        return bridge.validate(input);
+        return bridge.validate(param);
     }
     
-    std::shared_ptr<TileMap> TmxTileMapLoader::load(std::istream& input) const
+    std::shared_ptr<TileMap> TmxTileMapLoader::load(AssetStreamParam& param) const
     {
         TmxTileMapLoaderBridge bridge(_streamManager, _textureManager);
-        return bridge.load(input);
+        return bridge.load(param);
     }
 
 }

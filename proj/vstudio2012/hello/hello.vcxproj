@@ -69,18 +69,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ProjectReference Include="..\mvcgame\mvcgame.vcxproj">
+      <Project>{72d9c7e6-0687-49b6-90fb-98db445605d7}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="..\..\..\examples\hello\base\Application.cpp" />
     <ClCompile Include="..\..\..\examples\hello\base\ServiceLocator.cpp" />
     <ClCompile Include="..\..\..\examples\hello\controller\MainController.cpp" />
     <ClCompile Include="..\..\..\examples\hello\platform\win\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\mvcgame\mvcgame.vcxproj">
-      <Project>{72d9c7e6-0687-49b6-90fb-98db445605d7}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\..\examples\hello\base\Application.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\base\ServiceLocator.hpp" />
     <ClInclude Include="..\..\..\examples\hello\controller\MainController.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

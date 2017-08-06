@@ -1,57 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de código fuente">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="app">
+      <UniqueIdentifier>{00dea9e2-65a2-4729-a521-57e2feb80542}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    <Filter Include="app\base">
+      <UniqueIdentifier>{505a1d86-4015-430f-bbd5-a636bd91d2e7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Archivos de código fuente\controller">
-      <UniqueIdentifier>{a3ee6f18-5e71-4ff5-b3bd-78705d593375}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\controller">
-      <UniqueIdentifier>{dd7fe7c3-ed2e-41be-a6fe-168b0a0ad64e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\base">
-      <UniqueIdentifier>{98a3700d-c3b8-4915-93f5-4417b484a42d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\base">
-      <UniqueIdentifier>{8f72c059-585c-4863-bb83-311afcddae54}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\asset">
-      <UniqueIdentifier>{040fb9cc-ab5c-40b1-95b6-3af0afa8af33}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\asset">
-      <UniqueIdentifier>{29beabf2-838d-4413-a0bc-d9af8f913919}</UniqueIdentifier>
+    <Filter Include="app\controller">
+      <UniqueIdentifier>{bedb7128-ed00-4643-8e82-1289847f0e90}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\examples\hello\platform\win\main.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\examples\hello\controller\MainController.cpp">
-      <Filter>Archivos de código fuente\controller</Filter>
+      <Filter>app</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\examples\hello\base\Application.cpp">
-      <Filter>Archivos de código fuente\base</Filter>
+      <Filter>app\base</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\examples\hello\base\ServiceLocator.cpp">
-      <Filter>Archivos de código fuente\base</Filter>
+      <Filter>app\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\hello\controller\MainController.cpp">
+      <Filter>app\controller</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\examples\hello\controller\MainController.hpp">
-      <Filter>Archivos de encabezado\controller</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\examples\hello\base\Application.hpp">
-      <Filter>Archivos de encabezado\base</Filter>
+      <Filter>app\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\base\ServiceLocator.hpp">
+      <Filter>app\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\controller\MainController.hpp">
+      <Filter>app\controller</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

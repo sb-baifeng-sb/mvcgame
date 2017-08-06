@@ -147,6 +147,7 @@
     <ClInclude Include="..\..\..\src\mvcgame\action\ActionRunner.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\action\IAction.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\action\TweenAction.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetStreamParam.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\asset\FileStreamLoader.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\asset\IAssetLoader.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\asset\IStreamLoader.hpp" />

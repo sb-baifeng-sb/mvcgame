@@ -94,6 +94,9 @@
     <Filter Include="Third\spine">
       <UniqueIdentifier>{884a8e80-0874-41bc-83d5-3f2882e25740}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de código fuente\platform\gl">
+      <UniqueIdentifier>{3a73d3b5-829b-4e65-b65f-633b9da2f544}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\mvcgame\action\ActionRunner.cpp">
@@ -412,6 +415,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\lib\spine\src\spine\Json.h">
       <Filter>Third\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetStreamParam.hpp">
+      <Filter>Archivos de encabezado\asset</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

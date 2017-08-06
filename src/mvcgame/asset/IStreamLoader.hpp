@@ -5,6 +5,7 @@
 
 #include <string>
 #include <functional>
+#include "AssetStreamParam.hpp"
 
 namespace mvcgame {
 
@@ -17,6 +18,7 @@ namespace mvcgame {
          * @return true if the stream was loaded correctly
          */
         typedef std::function<bool(std::istream& in, const std::string& tag)> Callback;
+		typedef std::function<bool(AssetStreamParam& input)> Callback0;
 
         virtual ~IStreamLoader(){};
 

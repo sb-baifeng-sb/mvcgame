@@ -30,7 +30,7 @@ ServiceLocator::ServiceLocator()
 
     std::unique_ptr<CocosTextureAtlasLoader> cocos(new CocosTextureAtlasLoader());
     cocos->setTextureManager(_textures);
-    _textureAtlases.add(std::move(cocos), "plist");    
+    _textureAtlases.add(std::move(cocos), "plist");
 
     std::unique_ptr<FntFontAtlasLoader> fnt(new FntFontAtlasLoader());
     fnt->setTextureManager(_textures);
@@ -38,7 +38,7 @@ ServiceLocator::ServiceLocator()
 
     std::unique_ptr<SpineSkeletonLoader> spine(new SpineSkeletonLoader());
     spine->setTextureAtlasManager(_textureAtlases);
-    _skeletons.add(std::move(spine), "json");    
+    _skeletons.add(std::move(spine), "json");
 }
 
 AssetManager<SpineSkeleton>& ServiceLocator::getSkeletons()

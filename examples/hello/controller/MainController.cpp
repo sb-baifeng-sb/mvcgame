@@ -71,7 +71,7 @@ void MainController::controllerAdded()
     spineboy->addAnimation(true, 0);
     spineboy->addAnimation("walk", true, 1);  
 
-    bg->addChild(spineboy);    
+    bg->addChild(spineboy);
 
     setView(bg);
 }

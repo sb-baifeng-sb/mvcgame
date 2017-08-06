@@ -119,7 +119,9 @@
     <ClCompile Include="..\..\..\src\mvcgame\font\FontLetter.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\font\FontRegion.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\font\FontSheet.cpp" />
-    <ClCompile Include="..\..\..\src\mvcgame\platform\dx\RenderBridge.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\platform\BufferedTextureRenderBridge.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\platform\gl\RenderBridge.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\platform\IFilesystemBridge.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\platform\IRenderBridge.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\platform\win\ApplicationBridge.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\platform\win\FilesystemBridge.cpp" />
@@ -133,13 +135,21 @@
     <ClCompile Include="..\..\..\src\mvcgame\texture\Texture.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\texture\TextureAtlas.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\texture\TextureRegion.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\tile\Tile.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\tile\TileLayer.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\tile\TileMap.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\tile\TileSet.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\tile\TmxTileMapLoader.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\util\StringUtils.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\BaseView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\ColorView.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\view\NineScaleView.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\view\PanZoomView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\RootView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\SpineSkeletonView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\Sprite.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\TextView.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\view\TileMapView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\View.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +158,7 @@
     <ClInclude Include="..\..\..\src\mvcgame\action\IAction.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\action\TweenAction.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\asset\AssetManager.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetStreamManager.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\asset\AssetStreamParam.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\asset\FileStreamLoader.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\asset\IAssetLoader.hpp" />
@@ -166,12 +177,17 @@
     <ClInclude Include="..\..\..\src\mvcgame\event\IResponder.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\font\FntFontAtlasLoader.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\font\FontAtlas.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\font\FontAtlasPage.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\font\FontInfo.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\font\FontLetter.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\font\FontRegion.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\font\FontSheet.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\platform\ApplicationBridge.hpp" />
-    <ClInclude Include="..\..\..\src\mvcgame\platform\dx\RenderBridge.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\platform\BufferedTextureRenderBridge.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\platform\gl\RenderBridge.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\platform\IApplicationBridge.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\platform\IFilesystemBridge.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\platform\IRenderBridge.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\platform\win\ApplicationBridge.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\platform\win\FilesystemBridge.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\skeleton\SpineSkeleton.hpp" />
@@ -184,13 +200,22 @@
     <ClInclude Include="..\..\..\src\mvcgame\texture\Texture.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\texture\TextureAtlas.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\texture\TextureRegion.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\tile\Tile.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\tile\TileLayer.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\tile\TileMap.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\tile\TileSet.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\tile\TmxTileMapLoader.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\util\StringUtils.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\BaseView.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\ColorView.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\IViewMask.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\view\NineScaleView.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\view\PanZoomView.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\RootView.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\view\SpineSkeletonView.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\Sprite.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\TextView.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\view\TileMapView.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\View.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

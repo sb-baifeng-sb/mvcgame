@@ -1,233 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de código fuente">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Archivos de código fuente\action">
-      <UniqueIdentifier>{5ab32fe5-0757-47a8-8573-501af66a438c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\action">
-      <UniqueIdentifier>{99460726-543e-467a-be1d-93ec80b3af3e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\view">
-      <UniqueIdentifier>{70935b31-f373-4190-bd66-2fc80ac86963}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\event">
-      <UniqueIdentifier>{22950b3a-2ac4-470b-8995-3e71fdef3c8c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\view">
-      <UniqueIdentifier>{7ada751b-7c8c-4fd3-9819-a3a522ef79c6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\event">
-      <UniqueIdentifier>{b4870d36-e07a-41d2-b904-2a13656c1ce4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\controller">
-      <UniqueIdentifier>{f6cc3640-8ff1-450c-a2f0-faea6a0bf925}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\controller">
-      <UniqueIdentifier>{9e89cf73-d8ec-4d29-ac1f-5fd33d1dff7e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\base">
-      <UniqueIdentifier>{fb5dc796-1271-493e-9d8f-d3dcf25e4f15}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\base">
-      <UniqueIdentifier>{51de289f-d855-4100-9c25-693308eb75e1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\asset">
-      <UniqueIdentifier>{42e5c001-9342-4194-b5f3-c572a68f1433}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\asset">
-      <UniqueIdentifier>{523ef50e-9f51-4a45-bf1c-1f883c4a3203}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\texture">
-      <UniqueIdentifier>{c3587467-9dc9-412f-9305-79c4fa380cd8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\texture">
-      <UniqueIdentifier>{ecfb4f61-e98c-455c-948a-d2e850050f2a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\platform">
-      <UniqueIdentifier>{51039853-c021-4d0b-88b0-a421518b964b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\platform">
-      <UniqueIdentifier>{1bf246ed-754c-4dc1-a172-9ffa9a409068}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\platform\win">
-      <UniqueIdentifier>{7b9932aa-40ea-4b21-8d2b-d542a13f66b9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\platform\win">
-      <UniqueIdentifier>{02e72565-5fb3-4c9a-b914-67eb23afd502}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\platform\dx">
-      <UniqueIdentifier>{7e10b726-e921-4a04-ac9f-6f72bfb5d4d7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\platform\dx">
-      <UniqueIdentifier>{3a0c218a-f8aa-4cd4-a875-12e979bb054a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\font">
-      <UniqueIdentifier>{83d002f1-e7b6-4615-a7f8-fdf5abf12d47}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\font">
-      <UniqueIdentifier>{8dcdd308-5b77-4ee2-936d-1d355aadc968}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\util">
-      <UniqueIdentifier>{cda69ed9-4002-4a1b-8897-c915cbc8e90b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\util">
-      <UniqueIdentifier>{4656dd25-99a7-4bfc-906f-60cad0d221fc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\skeleton">
-      <UniqueIdentifier>{943357a4-d304-40ad-b27c-01f9376e4ea7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Third">
       <UniqueIdentifier>{3c90160b-1d8a-4a0a-8d07-d9a07055548a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Third\spine">
       <UniqueIdentifier>{884a8e80-0874-41bc-83d5-3f2882e25740}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de código fuente\platform\gl">
-      <UniqueIdentifier>{3a73d3b5-829b-4e65-b65f-633b9da2f544}</UniqueIdentifier>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{176d1987-115b-4a71-9939-edace77ac45d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de encabezado\skeleton">
-      <UniqueIdentifier>{8aa45321-9c99-45e1-8bc5-eb3bdfc9e364}</UniqueIdentifier>
+    <Filter Include="Framework\action">
+      <UniqueIdentifier>{926fa83c-0504-4121-af4d-368b8ebf2fd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\asset">
+      <UniqueIdentifier>{592fe4fe-75f8-4006-afa5-49fe7c332c3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\base">
+      <UniqueIdentifier>{066816ec-d368-446a-b74a-ee069a7389b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\controller">
+      <UniqueIdentifier>{ec6bb6a9-ec0f-4e85-89bc-595977d88703}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\event">
+      <UniqueIdentifier>{8c39fa88-9591-4a06-aeef-125556fcbb84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\font">
+      <UniqueIdentifier>{ce7508bf-8e6f-4934-8fc1-af3989990b8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\skeleton">
+      <UniqueIdentifier>{76345212-c8f2-4b67-bd62-5dd4ca9ab15b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\platform">
+      <UniqueIdentifier>{ecc4a952-4c73-4888-884f-10c2570020f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\platform\win">
+      <UniqueIdentifier>{3244c729-28f6-469e-b1a4-7ac63790d9ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\platform\gl">
+      <UniqueIdentifier>{beb2b86a-f69a-46ac-b987-d9695f2c619a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\platform\dx">
+      <UniqueIdentifier>{3fd49eca-b389-4668-b3b7-bc1a24ed86cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\texture">
+      <UniqueIdentifier>{4e5a68d1-54c2-4e87-a8a2-eba2ecd7309a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\tile">
+      <UniqueIdentifier>{eadf22a2-34b4-4819-8fad-0daebb7e3f2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\util">
+      <UniqueIdentifier>{3c1c539c-0e9b-4f4c-9be1-6c04fbb7fbf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\view">
+      <UniqueIdentifier>{7219c962-358c-4117-9cc5-3a541a0e3d3d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\src\mvcgame\action\ActionRunner.cpp">
-      <Filter>Archivos de código fuente\action</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\action\TweenAction.cpp">
-      <Filter>Archivos de código fuente\action</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\view\BaseView.cpp">
-      <Filter>Archivos de código fuente\view</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\event\Events.cpp">
-      <Filter>Archivos de código fuente\event</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\event\EventEmitter.cpp">
-      <Filter>Archivos de código fuente\event</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\controller\RootViewController.cpp">
-      <Filter>Archivos de código fuente\controller</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\controller\ViewController.cpp">
-      <Filter>Archivos de código fuente\controller</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\controller\BaseViewController.cpp">
-      <Filter>Archivos de código fuente\controller</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\base\Application.cpp">
-      <Filter>Archivos de código fuente\base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\base\Color.cpp">
-      <Filter>Archivos de código fuente\base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\base\Easing.cpp">
-      <Filter>Archivos de código fuente\base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\base\Geometry.cpp">
-      <Filter>Archivos de código fuente\base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\base\Time.cpp">
-      <Filter>Archivos de código fuente\base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\texture\Texture.cpp">
-      <Filter>Archivos de código fuente\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\texture\TextureAtlas.cpp">
-      <Filter>Archivos de código fuente\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\texture\TextureRegion.cpp">
-      <Filter>Archivos de código fuente\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\view\ColorView.cpp">
-      <Filter>Archivos de código fuente\view</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\view\RootView.cpp">
-      <Filter>Archivos de código fuente\view</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\view\Sprite.cpp">
-      <Filter>Archivos de código fuente\view</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\view\TextView.cpp">
-      <Filter>Archivos de código fuente\view</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\view\View.cpp">
-      <Filter>Archivos de código fuente\view</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\platform\win\ApplicationBridge.cpp">
-      <Filter>Archivos de código fuente\platform\win</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\platform\win\FilesystemBridge.cpp">
-      <Filter>Archivos de código fuente\platform\win</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\platform\dx\RenderBridge.cpp">
-      <Filter>Archivos de código fuente\platform\dx</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\font\FntFontAtlasLoader.cpp">
-      <Filter>Archivos de código fuente\font</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\font\FontAtlas.cpp">
-      <Filter>Archivos de código fuente\font</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\font\FontInfo.cpp">
-      <Filter>Archivos de código fuente\font</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\font\FontSheet.cpp">
-      <Filter>Archivos de código fuente\font</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\texture\GdxTextureAtlasLoader.cpp">
-      <Filter>Archivos de código fuente\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\texture\PngTextureLoader.cpp">
-      <Filter>Archivos de código fuente\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\texture\SpriteFrame.cpp">
-      <Filter>Archivos de código fuente\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\texture\SpriteSheet.cpp">
-      <Filter>Archivos de código fuente\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\asset\FileStreamLoader.cpp">
-      <Filter>Archivos de código fuente\asset</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\util\StringUtils.cpp">
-      <Filter>Archivos de código fuente\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\asset\AssetStreamManager.cpp">
-      <Filter>Archivos de código fuente\asset</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\skeleton\SpineSkeletonLoader.cpp">
-      <Filter>Archivos de código fuente\skeleton</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\skeleton\SpineSkeleton.cpp">
-      <Filter>Archivos de código fuente\skeleton</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\texture\CocosTextureAtlasLoader.cpp">
-      <Filter>Archivos de código fuente\texture</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\view\SpineSkeletonView.cpp">
-      <Filter>Archivos de código fuente\view</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\font\FontRegion.cpp">
-      <Filter>Archivos de código fuente\font</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\font\FontAtlasPage.cpp">
-      <Filter>Archivos de código fuente\font</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\mvcgame\font\FontLetter.cpp">
-      <Filter>Archivos de código fuente\font</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\lib\spine\src\spine\SlotData.c">
       <Filter>Third\spine</Filter>
     </ClCompile>
@@ -282,157 +111,358 @@
     <ClCompile Include="..\..\..\lib\spine\src\spine\Slot.c">
       <Filter>Third\spine</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\action\ActionRunner.cpp">
+      <Filter>Framework\action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\action\TweenAction.cpp">
+      <Filter>Framework\action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\asset\AssetStreamManager.cpp">
+      <Filter>Framework\asset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\asset\FileStreamLoader.cpp">
+      <Filter>Framework\asset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\base\Application.cpp">
+      <Filter>Framework\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\base\Color.cpp">
+      <Filter>Framework\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\base\Easing.cpp">
+      <Filter>Framework\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\base\Geometry.cpp">
+      <Filter>Framework\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\base\Time.cpp">
+      <Filter>Framework\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\controller\BaseViewController.cpp">
+      <Filter>Framework\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\controller\RootViewController.cpp">
+      <Filter>Framework\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\controller\ViewController.cpp">
+      <Filter>Framework\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\event\EventEmitter.cpp">
+      <Filter>Framework\event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\event\Events.cpp">
+      <Filter>Framework\event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\font\FntFontAtlasLoader.cpp">
+      <Filter>Framework\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontAtlas.cpp">
+      <Filter>Framework\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontAtlasPage.cpp">
+      <Filter>Framework\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontInfo.cpp">
+      <Filter>Framework\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontLetter.cpp">
+      <Filter>Framework\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontRegion.cpp">
+      <Filter>Framework\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\font\FontSheet.cpp">
+      <Filter>Framework\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\platform\BufferedTextureRenderBridge.cpp">
+      <Filter>Framework\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\platform\IFilesystemBridge.cpp">
+      <Filter>Framework\platform</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\src\mvcgame\platform\IRenderBridge.cpp">
-      <Filter>Archivos de código fuente\platform</Filter>
+      <Filter>Framework\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\platform\win\FilesystemBridge.cpp">
+      <Filter>Framework\platform\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\platform\win\ApplicationBridge.cpp">
+      <Filter>Framework\platform\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\platform\gl\RenderBridge.cpp">
+      <Filter>Framework\platform\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\skeleton\SpineSkeleton.cpp">
+      <Filter>Framework\skeleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\skeleton\SpineSkeletonLoader.cpp">
+      <Filter>Framework\skeleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\texture\CocosTextureAtlasLoader.cpp">
+      <Filter>Framework\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\texture\GdxTextureAtlasLoader.cpp">
+      <Filter>Framework\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\texture\PngTextureLoader.cpp">
+      <Filter>Framework\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\texture\SpriteFrame.cpp">
+      <Filter>Framework\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\texture\SpriteSheet.cpp">
+      <Filter>Framework\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\texture\Texture.cpp">
+      <Filter>Framework\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\texture\TextureAtlas.cpp">
+      <Filter>Framework\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\texture\TextureRegion.cpp">
+      <Filter>Framework\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\tile\Tile.cpp">
+      <Filter>Framework\tile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\tile\TileLayer.cpp">
+      <Filter>Framework\tile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\tile\TileMap.cpp">
+      <Filter>Framework\tile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\tile\TileSet.cpp">
+      <Filter>Framework\tile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\tile\TmxTileMapLoader.cpp">
+      <Filter>Framework\tile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\util\StringUtils.cpp">
+      <Filter>Framework\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\BaseView.cpp">
+      <Filter>Framework\view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\ColorView.cpp">
+      <Filter>Framework\view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\NineScaleView.cpp">
+      <Filter>Framework\view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\PanZoomView.cpp">
+      <Filter>Framework\view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\RootView.cpp">
+      <Filter>Framework\view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\SpineSkeletonView.cpp">
+      <Filter>Framework\view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\Sprite.cpp">
+      <Filter>Framework\view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\TextView.cpp">
+      <Filter>Framework\view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\TileMapView.cpp">
+      <Filter>Framework\view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\View.cpp">
+      <Filter>Framework\view</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\src\mvcgame\action\ActionRunner.hpp">
-      <Filter>Archivos de encabezado\action</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\action\IAction.hpp">
-      <Filter>Archivos de encabezado\action</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\view\BaseView.hpp">
-      <Filter>Archivos de encabezado\view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\view\ColorView.hpp">
-      <Filter>Archivos de encabezado\view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\view\IViewMask.hpp">
-      <Filter>Archivos de encabezado\view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\event\EventEmitter.hpp">
-      <Filter>Archivos de encabezado\event</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\event\Events.hpp">
-      <Filter>Archivos de encabezado\event</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\event\IResponder.hpp">
-      <Filter>Archivos de encabezado\event</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\view\TextView.hpp">
-      <Filter>Archivos de encabezado\view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\action\TweenAction.hpp">
-      <Filter>Archivos de encabezado\action</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\controller\RootViewController.hpp">
-      <Filter>Archivos de encabezado\controller</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\controller\ViewController.hpp">
-      <Filter>Archivos de encabezado\controller</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\view\View.hpp">
-      <Filter>Archivos de encabezado\view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\controller\BaseViewController.hpp">
-      <Filter>Archivos de encabezado\controller</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\base\Application.hpp">
-      <Filter>Archivos de encabezado\base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\base\Color.hpp">
-      <Filter>Archivos de encabezado\base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\base\Easing.hpp">
-      <Filter>Archivos de encabezado\base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\base\Geometry.hpp">
-      <Filter>Archivos de encabezado\base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\base\ObservedValue.hpp">
-      <Filter>Archivos de encabezado\base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\base\Time.hpp">
-      <Filter>Archivos de encabezado\base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\platform\ApplicationBridge.hpp">
-      <Filter>Archivos de encabezado\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\platform\IApplicationBridge.hpp">
-      <Filter>Archivos de encabezado\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\platform\IFilesystemBridge.hpp">
-      <Filter>Archivos de encabezado\platform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\texture\Texture.hpp">
-      <Filter>Archivos de encabezado\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\texture\TextureAtlas.hpp">
-      <Filter>Archivos de encabezado\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\texture\TextureRegion.hpp">
-      <Filter>Archivos de encabezado\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\view\RootView.hpp">
-      <Filter>Archivos de encabezado\view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\view\Sprite.hpp">
-      <Filter>Archivos de encabezado\view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\platform\win\ApplicationBridge.hpp">
-      <Filter>Archivos de encabezado\platform\win</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\platform\win\FilesystemBridge.hpp">
-      <Filter>Archivos de encabezado\platform\win</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\platform\dx\RenderBridge.hpp">
-      <Filter>Archivos de encabezado\platform\dx</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\font\FntFontAtlasLoader.hpp">
-      <Filter>Archivos de encabezado\font</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\font\FontAtlas.hpp">
-      <Filter>Archivos de encabezado\font</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\font\FontInfo.hpp">
-      <Filter>Archivos de encabezado\font</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\font\FontSheet.hpp">
-      <Filter>Archivos de encabezado\font</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\texture\GdxTextureAtlasLoader.hpp">
-      <Filter>Archivos de encabezado\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\texture\PngTextureLoader.hpp">
-      <Filter>Archivos de encabezado\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\texture\SpriteFrame.hpp">
-      <Filter>Archivos de encabezado\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\texture\SpriteSheet.hpp">
-      <Filter>Archivos de encabezado\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\asset\FileStreamLoader.hpp">
-      <Filter>Archivos de encabezado\asset</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\asset\IAssetLoader.hpp">
-      <Filter>Archivos de encabezado\asset</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\asset\IStreamLoader.hpp">
-      <Filter>Archivos de encabezado\asset</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\util\StringUtils.hpp">
-      <Filter>Archivos de encabezado\util</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\lib\spine\src\spine\Json.h">
       <Filter>Third\spine</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetStreamParam.hpp">
-      <Filter>Archivos de encabezado\asset</Filter>
+    <ClInclude Include="..\..\..\src\mvcgame\action\ActionRunner.hpp">
+      <Filter>Framework\action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\action\IAction.hpp">
+      <Filter>Framework\action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\action\TweenAction.hpp">
+      <Filter>Framework\action</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\mvcgame\asset\AssetManager.hpp">
-      <Filter>Archivos de encabezado\asset</Filter>
+      <Filter>Framework\asset</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\mvcgame\skeleton\SpineSkeletonLoader.hpp">
-      <Filter>Archivos de encabezado\skeleton</Filter>
+    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetStreamManager.hpp">
+      <Filter>Framework\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetStreamParam.hpp">
+      <Filter>Framework\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\asset\FileStreamLoader.hpp">
+      <Filter>Framework\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\asset\IAssetLoader.hpp">
+      <Filter>Framework\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\asset\IStreamLoader.hpp">
+      <Filter>Framework\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\base\Application.hpp">
+      <Filter>Framework\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\base\Color.hpp">
+      <Filter>Framework\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\base\Easing.hpp">
+      <Filter>Framework\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\base\Geometry.hpp">
+      <Filter>Framework\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\base\ObservedValue.hpp">
+      <Filter>Framework\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\base\Time.hpp">
+      <Filter>Framework\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\controller\BaseViewController.hpp">
+      <Filter>Framework\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\controller\RootViewController.hpp">
+      <Filter>Framework\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\controller\ViewController.hpp">
+      <Filter>Framework\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\event\EventEmitter.hpp">
+      <Filter>Framework\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\event\Events.hpp">
+      <Filter>Framework\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\event\IResponder.hpp">
+      <Filter>Framework\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\font\FntFontAtlasLoader.hpp">
+      <Filter>Framework\font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\font\FontAtlas.hpp">
+      <Filter>Framework\font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\font\FontAtlasPage.hpp">
+      <Filter>Framework\font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\font\FontInfo.hpp">
+      <Filter>Framework\font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\font\FontLetter.hpp">
+      <Filter>Framework\font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\font\FontRegion.hpp">
+      <Filter>Framework\font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\font\FontSheet.hpp">
+      <Filter>Framework\font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\platform\ApplicationBridge.hpp">
+      <Filter>Framework\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\platform\BufferedTextureRenderBridge.hpp">
+      <Filter>Framework\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\platform\IApplicationBridge.hpp">
+      <Filter>Framework\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\platform\IFilesystemBridge.hpp">
+      <Filter>Framework\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\platform\IRenderBridge.hpp">
+      <Filter>Framework\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\platform\win\ApplicationBridge.hpp">
+      <Filter>Framework\platform\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\platform\win\FilesystemBridge.hpp">
+      <Filter>Framework\platform\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\platform\gl\RenderBridge.hpp">
+      <Filter>Framework\platform\gl</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\mvcgame\skeleton\SpineSkeleton.hpp">
-      <Filter>Archivos de encabezado\skeleton</Filter>
+      <Filter>Framework\skeleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\skeleton\SpineSkeletonLoader.hpp">
+      <Filter>Framework\skeleton</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\mvcgame\texture\CocosTextureAtlasLoader.hpp">
-      <Filter>Archivos de encabezado\texture</Filter>
+      <Filter>Framework\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\texture\GdxTextureAtlasLoader.hpp">
+      <Filter>Framework\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\texture\PngTextureLoader.hpp">
+      <Filter>Framework\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\texture\SpriteFrame.hpp">
+      <Filter>Framework\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\texture\SpriteSheet.hpp">
+      <Filter>Framework\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\texture\Texture.hpp">
+      <Filter>Framework\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\texture\TextureAtlas.hpp">
+      <Filter>Framework\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\texture\TextureRegion.hpp">
+      <Filter>Framework\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\tile\Tile.hpp">
+      <Filter>Framework\tile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\tile\TileLayer.hpp">
+      <Filter>Framework\tile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\tile\TileMap.hpp">
+      <Filter>Framework\tile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\tile\TileSet.hpp">
+      <Filter>Framework\tile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\tile\TmxTileMapLoader.hpp">
+      <Filter>Framework\tile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\util\StringUtils.hpp">
+      <Filter>Framework\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\BaseView.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\ColorView.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\IViewMask.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\NineScaleView.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\PanZoomView.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\RootView.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\SpineSkeletonView.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\Sprite.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\TextView.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\TileMapView.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\View.hpp">
+      <Filter>Framework\view</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

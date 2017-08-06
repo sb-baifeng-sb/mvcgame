@@ -15,15 +15,16 @@ namespace mvcgame {
     {
     }
     
-    bool GdxTextureAtlasLoader::validate(std::istream& input) const
+    bool GdxTextureAtlasLoader::validate(AssetStreamParam& param) const
     {
         return true;
     }
 
-    std::shared_ptr<TextureAtlas> GdxTextureAtlasLoader::load(std::istream& in) const
+    std::shared_ptr<TextureAtlas> GdxTextureAtlasLoader::load(AssetStreamParam& param) const
     {
         assert(_textureManager);
 
+		std::istream& in = param.input;
         auto atlas = std::make_shared<TextureAtlas>();
         std::string line;
 

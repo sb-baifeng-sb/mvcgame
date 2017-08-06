@@ -17,8 +17,7 @@ namespace mvcgame {
          * Called by the loader with each possible stream
          * @return true if the stream was loaded correctly
          */
-        typedef std::function<bool(std::istream& in, const std::string& tag)> Callback;
-		typedef std::function<bool(AssetStreamParam& input)> Callback0;
+		typedef std::function<bool(AssetStreamParam& input)> Callback;
 
         virtual ~IStreamLoader(){};
 

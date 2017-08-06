@@ -97,6 +97,9 @@
     <Filter Include="Archivos de código fuente\platform\gl">
       <UniqueIdentifier>{3a73d3b5-829b-4e65-b65f-633b9da2f544}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\skeleton">
+      <UniqueIdentifier>{8aa45321-9c99-45e1-8bc5-eb3bdfc9e364}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\mvcgame\action\ActionRunner.cpp">
@@ -418,6 +421,18 @@
     </ClInclude>
     <ClInclude Include="..\..\..\src\mvcgame\asset\AssetStreamParam.hpp">
       <Filter>Archivos de encabezado\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\asset\AssetManager.hpp">
+      <Filter>Archivos de encabezado\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\skeleton\SpineSkeletonLoader.hpp">
+      <Filter>Archivos de encabezado\skeleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\skeleton\SpineSkeleton.hpp">
+      <Filter>Archivos de encabezado\skeleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\texture\CocosTextureAtlasLoader.hpp">
+      <Filter>Archivos de encabezado\texture</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -5,6 +5,7 @@
 
 #include <memory>
 #include <iostream>
+#include "AssetStreamParam.hpp"
 
 namespace mvcgame {
 
@@ -19,7 +20,7 @@ namespace mvcgame {
          *
          * @return true if the asset can be loaded
          */
-        virtual bool validate(std::istream& input) const
+		virtual bool validate(AssetStreamParam& param) const
         {
             return true;
         }
@@ -28,7 +29,7 @@ namespace mvcgame {
          * The stream should be at the start
          * @return the new asset
          */
-        virtual std::shared_ptr<Asset> load(std::istream& input) const = 0;
+		virtual std::shared_ptr<Asset> load(AssetStreamParam& param) const = 0;
     };
 
 }

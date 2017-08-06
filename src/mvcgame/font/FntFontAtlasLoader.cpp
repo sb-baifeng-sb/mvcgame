@@ -82,8 +82,9 @@ namespace mvcgame {
     {
     }
 
-    bool FntFontAtlasLoader::validate(std::istream& in) const
+    bool FntFontAtlasLoader::validate(AssetStreamParam& param) const
     {
+		std::istream& in = param.input;
         std::string line;
         std::getline(in, line);
         return line.find("info ") == 0;
@@ -134,10 +135,11 @@ namespace mvcgame {
         return data;
     }
 
-    std::shared_ptr<FontAtlas> FntFontAtlasLoader::load(std::istream& in) const
+    std::shared_ptr<FontAtlas> FntFontAtlasLoader::load(AssetStreamParam& param) const
     {
         assert(_textureManager);
 
+		std::istream& in = param.input;
         auto atlas = std::make_shared<FontAtlas>();
         std::string str;
 

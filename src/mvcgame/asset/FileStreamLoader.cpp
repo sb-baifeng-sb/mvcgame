@@ -28,7 +28,10 @@ namespace mvcgame {
                 {
                     tag = path.substr(pos+1);
                 }
-                if(callback(in, tag))
+				AssetStreamParam param(in);
+				param.args["name"] = name;
+				param.args["tag"] = tag;
+                if(callback(param))
                 {
                     return true;
                 }

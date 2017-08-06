@@ -11,8 +11,8 @@ namespace mvcgame {
     class PngTextureLoader : public IAssetLoader<Texture>
     {
     public:
-        bool validate(std::istream& input) const;
-        std::shared_ptr<Texture> load(std::istream& input) const;
+        bool validate(AssetStreamParam& param) const;
+        std::shared_ptr<Texture> load(AssetStreamParam& param) const;
     };
 }
 

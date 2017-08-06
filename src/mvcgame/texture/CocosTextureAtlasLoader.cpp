@@ -169,14 +169,16 @@ namespace mvcgame {
     {
     }
     
-    bool CocosTextureAtlasLoader::validate(std::istream& input) const
+    bool CocosTextureAtlasLoader::validate(AssetStreamParam& param) const
     {
+		std::istream& input = param.input;
         CocosTextureAtlasLoaderBridge bridge(_textureManager);
         return bridge.validate(input);
     }
 
-    std::shared_ptr<TextureAtlas> CocosTextureAtlasLoader::load(std::istream& input) const
+    std::shared_ptr<TextureAtlas> CocosTextureAtlasLoader::load(AssetStreamParam& param) const
     {
+		std::istream& input = param.input;
         CocosTextureAtlasLoaderBridge bridge(_textureManager);
         return bridge.load(input);
     }

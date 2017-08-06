@@ -9,8 +9,9 @@
 namespace mvcgame {
 	typedef struct AssetStreamParam {
 		typedef std::map<std::string, std::string> Param;
-		std::istream input;
+		std::istream& input;
 		Param args;
+		AssetStreamParam(std::istream& in) :input(in){}
 	} AssetStreamParam;
 }
 

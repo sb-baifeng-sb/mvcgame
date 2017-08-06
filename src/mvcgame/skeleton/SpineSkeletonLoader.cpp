@@ -110,8 +110,9 @@ namespace mvcgame {
     {
     }
 
-    bool SpineSkeletonLoader::validate(std::istream& input) const
+    bool SpineSkeletonLoader::validate(AssetStreamParam& param) const
     {
+		std::istream& input = param.input;
         std::string str((std::istreambuf_iterator<char>(input)), std::istreambuf_iterator<char>());
         AtlasAttachmentLoader* loader = AtlasAttachmentLoader_create(nullptr);
         SkeletonJson* json = SkeletonJson_createWithLoader(SUPER(loader));
@@ -125,10 +126,12 @@ namespace mvcgame {
         return false;
     }
 
-    std::shared_ptr<SpineSkeleton> SpineSkeletonLoader::load(std::istream& input) const
+    std::shared_ptr<SpineSkeleton> SpineSkeletonLoader::load(AssetStreamParam& param) const
     {
+		std::string name = param.args["name"];
+		std::istream& input = param.input;
         std::string str((std::istreambuf_iterator<char>(input)), std::istreambuf_iterator<char>());
-        auto atlas = _textureAtlasManager->load("spineboy");
+        auto atlas = _textureAtlasManager->load(name);
         AtlasAttachmentLoader* loader = AtlasAttachmentLoader_create(atlas.get());
         SkeletonJson* json = SkeletonJson_createWithLoader(SUPER(loader));
         SkeletonData* data = SkeletonJson_readSkeletonData(json, str.c_str());

@@ -36,8 +36,8 @@ namespace mvcgame {
         static Data parseData(const std::string& line);
     public:
         FntFontAtlasLoader();
-        bool validate(std::istream& input) const;
-        std::shared_ptr<FontAtlas> load(std::istream& input) const;
+        bool validate(AssetStreamParam& param) const;
+		std::shared_ptr<FontAtlas> load(AssetStreamParam& param) const;
 
         /**
          * Set the assets manager to load related textures

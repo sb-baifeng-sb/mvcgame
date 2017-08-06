@@ -69,7 +69,7 @@ void MainController::controllerAdded()
     spineboy->addAnimation("jump", false, 3);
     spineboy->addAnimation("walk", true, 0);
     spineboy->addAnimation(true, 0);
-    spineboy->addAnimation("walk", true, 1);  
+    spineboy->addAnimation("walk", true, 1);
 
     bg->addChild(spineboy);
 

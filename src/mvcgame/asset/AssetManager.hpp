@@ -34,38 +34,41 @@ namespace mvcgame {
         LoaderMap _loaders;
         AssetStreamManager* _streams;
 
-        bool doLoadStream(std::istream& in, const Loaders& loaders, std::shared_ptr<Asset>& asset)
-        {
-            for(const std::unique_ptr<Loader>& loader : loaders)
-            {
-                in.seekg(0, std::ios::beg);
-                if(loader->validate(in))
-                {
-                    in.seekg(0, std::ios::beg);
-                    asset = loader->load(in);
-                    if(asset)
-                    {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
+		bool doLoadStream(AssetStreamParam& param, const Loaders& loaders, std::shared_ptr<Asset>& asset)
+		{
+			std::istream& in = param.input;
+			for (const std::unique_ptr<Loader>& loader : loaders)
+			{
+				in.seekg(0, std::ios::beg);
+				if (loader->validate(param))
+				{
+					in.seekg(0, std::ios::beg);
+					asset = loader->load(param);
+					if (asset)
+					{
+						return true;
+					}
+				}
+			}
+			return false;
+		}
 
-        bool loadStream(std::istream& in, const std::string& tag, std::shared_ptr<Asset>& asset)
-        {
-            typename LoaderMap::const_iterator itr = _loaders.find(tag);
-            if(itr != _loaders.end() && doLoadStream(in, itr->second, asset))
-            {
-                return true;
-            }
-            itr = _loaders.find("");
-            if(itr != _loaders.end() && doLoadStream(in, itr->second, asset))
-            {
-                return true;
-            }
-            return false;
-        }
+		bool loadStream(AssetStreamParam& param, std::shared_ptr<Asset>& asset)
+		{
+			std::istream& in = param.input;
+			std::string& tag = param.args["tag"];
+			typename LoaderMap::const_iterator itr = _loaders.find(tag);
+			if (itr != _loaders.end() && doLoadStream(param, itr->second, asset))
+			{
+				return true;
+			}
+			itr = _loaders.find("");
+			if (itr != _loaders.end() && doLoadStream(param, itr->second, asset))
+			{
+				return true;
+			}
+			return false;
+		}
 
     public:
         AssetManager() :
@@ -91,7 +94,7 @@ namespace mvcgame {
             if(_streams && !_loaders.empty())
             {
                 success = _streams->load(name, std::bind(&AssetManager<Asset>::loadStream,
-                    this, std::placeholders::_1, std::placeholders::_2, std::ref(asset)));
+                    this, std::placeholders::_1, std::ref(asset)));
             }
 			if(!success)
 			{

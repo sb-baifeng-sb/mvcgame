@@ -13,8 +13,9 @@
 
 namespace mvcgame {
 
-    bool PngTextureLoader::validate(std::istream& input) const
+    bool PngTextureLoader::validate(AssetStreamParam& param) const
     {
+		std::istream& input = param.input;
         png_byte pngSig[PNGSIGSIZE];
         memset(pngSig, 0, PNGSIGSIZE);
         bool isPng = false;
@@ -44,8 +45,9 @@ namespace mvcgame {
             ->read(reinterpret_cast<std::istream::char_type*>(data), length);
     }
 
-    std::shared_ptr<Texture> PngTextureLoader::load(std::istream& input) const
+    std::shared_ptr<Texture> PngTextureLoader::load(AssetStreamParam& param) const
     {
+		std::istream& input = param.input;
         png_structp pngPtr = png_create_read_struct(PNG_LIBPNG_VER_STRING, nullptr, nullptr, nullptr);
         if (!pngPtr)
         {

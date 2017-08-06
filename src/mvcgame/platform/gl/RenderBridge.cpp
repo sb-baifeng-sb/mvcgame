@@ -21,8 +21,7 @@
 
 namespace mvcgame {
 
-    RenderBridge::RenderBridge()
-    {
+    RenderBridge::RenderBridge() {
     }
 
     void RenderBridge::getGlTransform(const Transform& t, float* m)
@@ -167,5 +166,15 @@ namespace mvcgame {
         std::cout << "<<<<" << std::endl;
 #endif        
     }
+
+	void RenderBridge::beforeDraw()
+	{
+
+	}
+
+	void RenderBridge::afterDraw()
+	{
+
+	}
 
 }

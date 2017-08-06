@@ -81,8 +81,8 @@ namespace mvcgame {
 			WS_OVERLAPPEDWINDOW,	// window style
 			300,					// x-position of the window
 			300,					// y-position of the window
-			500,					// width of the window
-			400,					// height of the window
+			960,					// width of the window
+			544,					// height of the window
 			NULL,					// we have no parent window, NULL
 			NULL,					// we aren't using menus, NULL
 			_instance,				// application handle
@@ -96,6 +96,7 @@ namespace mvcgame {
 		{
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
+			_app->update();
 		}
 
 		_cmdQuit = msg.wParam;

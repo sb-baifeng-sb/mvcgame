@@ -2,7 +2,7 @@
 #define mvcgame_win_ApplicationBridge_hpp
 
 #include <mvcgame/platform/IApplicationBridge.hpp>
-#include <mvcgame/platform/dx/RenderBridge.hpp>
+#include <mvcgame/platform/gl/RenderBridge.hpp>
 #include <mvcgame/platform/win/FilesystemBridge.hpp>
 
 #include <windows.h>

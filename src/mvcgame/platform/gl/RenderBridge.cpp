@@ -6,8 +6,13 @@
 #include <mvcgame/texture/Texture.hpp>
 #include <mvcgame/texture/TextureRegion.hpp>
 
+#ifdef WIN32
+#include <windows.h>
+#define GL_CLAMP_TO_EDGE 0x812F
+#endif // WIN32
+
 #include <GL/gl.h>
-#include <GL/glx.h>
+//#include <GL/glx.h>
 #include <GL/glu.h>
 
 #ifdef MVCGAME_DEBUG_DRAW

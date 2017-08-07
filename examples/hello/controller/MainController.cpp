@@ -23,7 +23,7 @@ MainController::MainController()
 void MainController::controllerAdded()
 {
 	auto bg = std::make_shared<ColorView>();
-	bg->setBackgroundColor(Color(255, 0, 0));
+	bg->setBackgroundColor(Color(50, 255, 50));
 	bg->getFrame().size = getRoot().getView().getSize();
 	bg->getFrame().origin = bg->getFrame().size / 2;
 
@@ -35,17 +35,11 @@ void MainController::controllerAdded()
 	_guybrush->setSpriteFrameDuration(20);
 	bg->addChild(_guybrush);
 
-	auto colorMask = std::make_shared<ColorView>();
+	/*auto colorMask = std::make_shared<ColorView>();
 	colorMask->setBackgroundColor(Color(0, 0, 0, 30));
 	colorMask->getFrame().size = _guybrush->getFrame().size;
 	colorMask->getFrame().origin = _guybrush->getFrame().size / 2;
-	_guybrush->addChild(colorMask);
-
-	auto testMask = std::make_shared<ColorView>();
-	testMask->setBackgroundColor(Color(0, 0, 255));
-	testMask->getFrame().size = mvcgame::Size(100, 100);
-	testMask->getFrame().origin = mvcgame::Point(0, 0);
-	bg->addChild(testMask);
+	_guybrush->addChild(colorMask);*/
 
 	auto miguelAtlas = ServiceLocator::get().getTextureAtlases().load("miguel");
 	auto miguel = std::make_shared<Sprite>(*miguelAtlas);
@@ -60,15 +54,24 @@ void MainController::controllerAdded()
 	title->setSheet(fontSheet);
 	title->getFrame().size = Size(50, 50);
 	title->getFrame().origin = bg->getFrame().size / 2;
-	//title->getFrame().origin.x -= 50;
-	//stitle->getFrame().origin.y += 150;
-	title->setText("mvcgame says hello!");
+	title->setText("I'm your father!");
 	bg->addChild(title);
 
+	auto dragonSkel = ServiceLocator::get().getSkeletons().load("dragon");
+	auto dragon = std::make_shared<SpineSkeletonView>(dragonSkel);
+	dragon->getFrame().origin = bg->getFrame().size / 2;
+	dragon->getFrame().origin.x -= 200;
+	dragon->getFrame().origin.y /= 2;
+	dragon->getFrame().origin.y += 250;
+	dragon->setScale(0.5);
+
+	dragon->setAnimation("flying", true);
+	dragon->addAnimation("flying", true, 1);
+
 	auto spineboySkel = ServiceLocator::get().getSkeletons().load("spineboy");
-	std::cout << *spineboySkel << std::endl;
 	auto spineboy = std::make_shared<SpineSkeletonView>(spineboySkel);
 	spineboy->getFrame().origin = bg->getFrame().size / 2;
+	spineboy->getFrame().origin.x += 200;
 	spineboy->getFrame().origin.y /= 2;
 	spineboy->setScale(0.5);
 
@@ -83,6 +86,7 @@ void MainController::controllerAdded()
 	spineboy->addAnimation("walk", true, 1);
 
 	bg->addChild(spineboy);
+	bg->addChild(dragon);
 
 	setView(bg);
 }
@@ -95,8 +99,6 @@ void MainController::respondOnTouchStart(const TouchEvent& event)
 	{
 		std::cout << "GUYBRUSH TOUCHED!!!" << std::endl;
 		_guybrushTouchPoint = event.getPoints()[0];
-		//_guybrushTouchPoint = event.getTouchPoint(*_guybrush);
-		//_guybrushTouchPoint -= _guybrush->getFrame().origin;
 	}
 }
 

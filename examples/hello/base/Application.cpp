@@ -13,6 +13,7 @@ void Application::run()
 {
 	std::unique_ptr<mvcgame::FileStreamLoader> fs(new mvcgame::FileStreamLoader(getBridge().getFilesystem()));
 	fs->addPath("../../../examples/hello/resources");
+	fs->addPath("resources");
 	ServiceLocator::get().getAssetStreams().addLoader(std::move(fs));
 
     getRoot().getView().setSize(mvcgame::Size(960, 544));

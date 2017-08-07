@@ -14,6 +14,7 @@
 #include <GL/gl.h>
 //#include <GL/glx.h>
 #include <GL/glu.h>
+#include <glut.h>
 
 #ifdef MVCGAME_DEBUG_DRAW
 #include <iostream>
@@ -169,12 +170,12 @@ namespace mvcgame {
 
 	void RenderBridge::beforeDraw()
 	{
-
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	}
 
 	void RenderBridge::afterDraw()
 	{
-
+		glutSwapBuffers();
 	}
 
 }

@@ -62,6 +62,12 @@ namespace mvcgame {
 		glutSwapBuffers();
 	}
 
+	void OnTimer(int value)
+	{
+		glutPostRedisplay();
+		glutTimerFunc(16, OnTimer, 1);
+	}
+
 	void ApplicationBridge::run()
 	{
 		assert(_app);
@@ -71,9 +77,10 @@ namespace mvcgame {
 		glutInitWindowSize(960, 544);
 		glutInitWindowPosition(200, 100);
 		glutCreateWindow("Lite2D");
+
+		glutTimerFunc(16, OnTimer, 1);
 		glutDisplayFunc([]() {
-			//ApplicationBridge::glDisplay();
-			display();
+			ApplicationBridge::glDisplay();
 		});
 		glutReshapeFunc([](int w, int h) {
 			ApplicationBridge::glReshape(w, h);
@@ -95,10 +102,9 @@ namespace mvcgame {
 		glViewport(0, 0, (GLsizei)w, (GLsizei)h);
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
-		gluPerspective(60.0, (GLfloat)w / (GLfloat)h, 0.5, 20.0);
+		glOrtho(-1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f);
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
-		gluLookAt(0.0, 10.0, 10.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 	}
 
 	void ApplicationBridge::glInputProc(unsigned char key, int x, int y)
@@ -131,7 +137,7 @@ namespace mvcgame {
 			default:
 				break;
 			}
-			printf("鼠标%s: x:%d, y:%d\n", state == GLUT_DOWN ? "按下" : "弹起", x, y);
+			//printf("鼠标%s: x:%d, y:%d\n", state == GLUT_DOWN ? "按下" : "弹起", x, y);
 		}
 	}
 

@@ -15,7 +15,7 @@ void Application::run()
 	fs->addPath("../../../examples/hello/resources");
 	ServiceLocator::get().getAssetStreams().addLoader(std::move(fs));
 
-    getRoot().getView().setSize(mvcgame::Size(480, 320));
+    getRoot().getView().setSize(mvcgame::Size(960, 544));
     getRoot().addChild(std::unique_ptr<mvcgame::ViewController>(new MainController()));    
     mvcgame::Application::run();
 }

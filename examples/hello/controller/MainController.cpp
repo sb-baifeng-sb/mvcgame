@@ -23,7 +23,7 @@ MainController::MainController()
 void MainController::controllerAdded()
 {
 	auto bg = std::make_shared<ColorView>();
-	bg->setBackgroundColor(Color(100, 100, 100));
+	bg->setBackgroundColor(Color(255, 0, 0));
 	bg->getFrame().size = getRoot().getView().getSize();
 	bg->getFrame().origin = bg->getFrame().size / 2;
 
@@ -34,6 +34,18 @@ void MainController::controllerAdded()
 	_guybrush->setScale(0.5);
 	_guybrush->setSpriteFrameDuration(20);
 	bg->addChild(_guybrush);
+
+	auto colorMask = std::make_shared<ColorView>();
+	colorMask->setBackgroundColor(Color(0, 0, 0, 30));
+	colorMask->getFrame().size = _guybrush->getFrame().size;
+	colorMask->getFrame().origin = _guybrush->getFrame().size / 2;
+	_guybrush->addChild(colorMask);
+
+	auto testMask = std::make_shared<ColorView>();
+	testMask->setBackgroundColor(Color(0, 0, 255));
+	testMask->getFrame().size = mvcgame::Size(100, 100);
+	testMask->getFrame().origin = mvcgame::Point(0, 0);
+	bg->addChild(testMask);
 
 	auto miguelAtlas = ServiceLocator::get().getTextureAtlases().load("miguel");
 	auto miguel = std::make_shared<Sprite>(*miguelAtlas);
@@ -48,8 +60,8 @@ void MainController::controllerAdded()
 	title->setSheet(fontSheet);
 	title->getFrame().size = Size(50, 50);
 	title->getFrame().origin = bg->getFrame().size / 2;
-	title->getFrame().origin.x -= 50;
-	title->getFrame().origin.y += 150;
+	//title->getFrame().origin.x -= 50;
+	//stitle->getFrame().origin.y += 150;
 	title->setText("mvcgame says hello!");
 	bg->addChild(title);
 
@@ -82,8 +94,9 @@ void MainController::respondOnTouchStart(const TouchEvent& event)
 	if (_guybrushTouched)
 	{
 		std::cout << "GUYBRUSH TOUCHED!!!" << std::endl;
-		_guybrushTouchPoint = event.getTouchPoint(*_guybrush);
-		_guybrushTouchPoint -= _guybrush->getFrame().origin;
+		_guybrushTouchPoint = event.getPoints()[0];
+		//_guybrushTouchPoint = event.getTouchPoint(*_guybrush);
+		//_guybrushTouchPoint -= _guybrush->getFrame().origin;
 	}
 }
 
@@ -92,9 +105,10 @@ void MainController::respondOnTouchUpdate(const TouchEvent& event)
 	if (_guybrushTouched)
 	{
 		std::cout << "GUYBRUSH MOVED!!!" << std::endl;
-		auto point = event.getTouchPoint(*_guybrush);
-		point -= _guybrushTouchPoint;
-		_guybrush->getFrame().origin = point;
+		auto point = event.getPoints()[0];
+		auto vec = point - _guybrushTouchPoint;
+		_guybrushTouchPoint = point;
+		_guybrush->getFrame().origin += vec;
 	}
 }
 

@@ -5,8 +5,6 @@
 #include <mvcgame/platform/gl/RenderBridge.hpp>
 #include <mvcgame/platform/win/FilesystemBridge.hpp>
 
-#include <windows.h>
-
 namespace mvcgame {
 
     class ApplicationBridge : public IApplicationBridge
@@ -16,11 +14,12 @@ namespace mvcgame {
         RenderBridge _renderBridge;
         FilesystemBridge _fsBridge;
 
-		HINSTANCE _instance;
-		int _cmdShow;
-		int _cmdQuit;
+		// os args
+		int _argc;
+		char** _argv;
+
     public:
-        ApplicationBridge();
+		ApplicationBridge(int argc, char** argv);
         void run();
         void exit();
         void setApplication(Application& app);
@@ -29,12 +28,15 @@ namespace mvcgame {
         IRenderBridge& getRender();
         IFilesystemBridge& getFilesystem();
 
-		/**
-		 windows specific stuff
-		 */
-		void setInstance(HINSTANCE instance);
-		void setCmdShow(int cmdShow);
-		int getCmdQuit() const;
+	public:
+		static void glReshape(int w, int h);
+		static void glInputProc(unsigned char key, int x, int y);
+		static void glMouseProc(int button, int state, int x, int y);
+		static void glmouseMoveProc(int x, int w);
+		static void glDisplay();
+	private:
+		static ApplicationBridge* _instance;
+		static ApplicationBridge& getInstance();
     };
 }
 

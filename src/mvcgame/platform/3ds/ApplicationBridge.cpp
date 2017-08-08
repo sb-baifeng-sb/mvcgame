@@ -42,4 +42,5 @@ namespace mvcgame {
         assert(_app);
         assert(_argv);
     }
+
 }

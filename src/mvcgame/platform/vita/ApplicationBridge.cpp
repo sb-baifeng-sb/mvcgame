@@ -22,9 +22,20 @@
 
 namespace mvcgame {
 
+    static int const SCREEN_WIDTH = 960;
+    static int const SCREEN_HEIGHT = 544;
+
+    ApplicationBridge* ApplicationBridge::_instance = NULL;
+
+    ApplicationBridge& ApplicationBridge::getInstance()
+    {
+        return *_instance;
+    }
+
     ApplicationBridge::ApplicationBridge(int argc, char** argv) :
     _app(nullptr), _finished(false), _argc(argc), _argv(argv)
     {
+        _instance = this;
     }
 
     IRenderBridge& ApplicationBridge::getRender()
@@ -248,15 +259,21 @@ namespace mvcgame {
     }
 
     void ApplicationBridge::touchDownProc(int x, int y) {
-        
+        std::vector<Point> ptVec;
+        ptVec.push_back(Point(x, SCREEN_HEIGHT - y));
+        getInstance()._app->getRoot().emitTouchStart(ptVec);
     }
 
     void ApplicationBridge::touchMoveProc(int x, int y) {
-        
+        std::vector<Point> ptVec;
+        ptVec.push_back(Point(x, SCREEN_HEIGHT - y));
+        getInstance()._app->getRoot().emitTouchUpdate(ptVec);
     }
 
     void ApplicationBridge::touchUpProc(int x, int y) {
-        
+        std::vector<Point> ptVec;
+        ptVec.push_back(Point(x, SCREEN_HEIGHT - y));
+        getInstance()._app->getRoot().emitTouchEnd(ptVec);
     }
 
 }

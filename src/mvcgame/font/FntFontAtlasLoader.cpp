@@ -7,7 +7,10 @@
 #include <string>
 #include <algorithm>
 #include <cassert>
+
+#ifdef PSVITA
 #include <tgmath.h>
+#endif
 
 #define ATTR_SEP ' '
 #define ATTR_VAL_SEP '='

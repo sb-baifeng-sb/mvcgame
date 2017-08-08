@@ -2,8 +2,8 @@
 #define mvcgame_linux_ApplicationBridge_hpp
 
 #include <mvcgame/platform/IApplicationBridge.hpp>
-#include <mvcgame/platform/vita/RenderBridge.hpp>
-#include <mvcgame/platform/vita/FilesystemBridge.hpp>
+#include <mvcgame/platform/3ds/RenderBridge.hpp>
+#include <mvcgame/platform/3ds/FilesystemBridge.hpp>
 
 namespace mvcgame {
 

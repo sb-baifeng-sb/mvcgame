@@ -1,6 +1,6 @@
 
 
-#include <mvcgame/platform/vita/FilesystemBridge.hpp>
+#include <mvcgame/platform/3ds/FilesystemBridge.hpp>
 
 #define DIR_SEP '/'
 

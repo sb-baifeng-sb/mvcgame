@@ -1,5 +1,5 @@
 
-#include <mvcgame/platform/vita/ApplicationBridge.hpp>
+#include <mvcgame/platform/3ds/ApplicationBridge.hpp>
 #include <mvcgame/base/Application.hpp>
 #include <mvcgame/base/Geometry.hpp>
 #include <mvcgame/controller/RootViewController.hpp>

@@ -1,5 +1,5 @@
 
-#include <mvcgame/platform/vita/RenderBridge.hpp>
+#include <mvcgame/platform/3ds/RenderBridge.hpp>
 #include <mvcgame/base/Geometry.hpp>
 #include <mvcgame/base/Color.hpp>
 #include <mvcgame/texture/Texture.hpp>

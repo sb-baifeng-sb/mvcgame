@@ -7,6 +7,7 @@
 #include <string>
 #include <algorithm>
 #include <cassert>
+#include <tgmath.h>
 
 #define ATTR_SEP ' '
 #define ATTR_VAL_SEP '='
@@ -50,7 +51,11 @@ namespace mvcgame {
         {
             return def;
         }
+#ifdef PSVITA
+        return round(std::stof(itr->second));
+#else
         return std::round(std::stof(itr->second));
+#endif
     }
 
     template<>

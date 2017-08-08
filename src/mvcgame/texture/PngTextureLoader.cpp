@@ -3,6 +3,7 @@
 #include <mvcgame/texture/PngTextureLoader.hpp>
 #include <mvcgame/texture/Texture.hpp>
 #include <png.h>
+#include <cstring>
 
 /**
  * this png loader is based on this blog post

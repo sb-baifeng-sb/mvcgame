@@ -11,3 +11,9 @@ bin
 /proj/vstudio2012/ipch/*
 *.sdf
 *.opensdf
+*.o
+*.bin
+*.elf
+*.velf
+*.vpk
+*.sfo

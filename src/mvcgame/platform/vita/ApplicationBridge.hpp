@@ -27,6 +27,16 @@ namespace mvcgame {
         void showError(const std::string& error);
         IRenderBridge& getRender();
         IFilesystemBridge& getFilesystem();
+
+    public:
+        static void keyDownProc(int key);
+        static void keyUpProc(int key);
+        static void touchDownProc(int x, int y);
+        static void touchMoveProc(int x, int w);
+        static void touchUpProc(int x, int y);
+    private:
+        static ApplicationBridge* _instance;
+        static ApplicationBridge& getInstance();
     };
 }
 

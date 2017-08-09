@@ -21,7 +21,6 @@ namespace mvcgame {
         void setTransform(const Transform& transform);        
         void drawPolygon(const Points& verts, const Color& color);
         void drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices);
-        void drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect, const TextureRegion& region);
 		void beforeDraw();
 		void afterDraw();
     };

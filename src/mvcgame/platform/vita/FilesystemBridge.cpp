@@ -22,7 +22,7 @@ namespace mvcgame {
 
     bool FilesystemBridge::readResource(const std::string& path, std::ifstream& in)
     {
-        return true;
+        return false;
     }
 
     FilesystemBridge::Paths FilesystemBridge::findResource(const std::string& name, const std::string& path)

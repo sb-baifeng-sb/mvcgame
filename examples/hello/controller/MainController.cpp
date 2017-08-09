@@ -27,6 +27,12 @@ void MainController::controllerAdded()
 	bg->getFrame().size = getRoot().getView().getSize();
 	bg->getFrame().origin = bg->getFrame().size / 2;
 
+	if (true)
+	{
+		setView(bg);
+		return;
+	}
+
 	auto guybrushAtlas = ServiceLocator::get().getTextureAtlases().load("guybrush");
 	_guybrush = std::make_shared<Sprite>(*guybrushAtlas);
 	_guybrush->getFrame().origin = bg->getFrame().size / 2;

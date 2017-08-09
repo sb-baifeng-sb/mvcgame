@@ -4,6 +4,9 @@
 #include <mvcgame/base/Geometry.hpp>
 #include <mvcgame/controller/RootViewController.hpp>
 #include <cassert>
+#include <cstring>
+#include <string>
+#include <iostream>
 
 #include <psp2/ctrl.h>
 #include <psp2/kernel/processmgr.h>
@@ -234,28 +237,57 @@ namespace mvcgame {
         // 初始化图形
         vita2d_init();
         vita2d_set_clear_color(BLACK);
+        memset(&input, 0, sizeof(input));
 
         // 初始化控制
         sceCtrlSetSamplingMode(SCE_CTRL_MODE_ANALOG_WIDE);
         sceTouchSetSamplingState(SCE_TOUCH_PORT_FRONT, SCE_TOUCH_SAMPLING_STATE_START);
         sceTouchSetSamplingState(SCE_TOUCH_PORT_BACK, SCE_TOUCH_SAMPLING_STATE_START);
 
+        // 帧率
+        float dt = 0.0f;
+		SceUInt64 cur_micros = 0, delta_micros = 0, last_micros = 0;
+		last_micros = sceKernelGetProcessTimeWide();
+		auto pgf = vita2d_load_default_pgf();
+
+		// 测试代码
+		std::ifstream file("app0:resources/hello.txt");
+        std::string hello((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+
         while(!_finished) {
             input.InputProc();
-            _app->update();
+            //_app->update();
+
+            cur_micros = sceKernelGetProcessTimeWide();
+
+            // display begin
+			vita2d_start_drawing();
+			vita2d_clear_screen();
+
+			vita2d_pgf_draw_textf(pgf, 2, 22, WHITE, 1.0f, "FPS %.2f", (1.0f / dt));
+			vita2d_pgf_draw_textf(pgf, 2, 22+20, WHITE, 1.0f, hello.c_str());
+
+			// display end
+            vita2d_end_drawing();
+			vita2d_swap_buffers();
+
+			delta_micros = cur_micros - last_micros;
+			last_micros = cur_micros;
+			dt = (float)delta_micros / 1000000.0f;
         }
 
         // 结束
         vita2d_fini();
+        vita2d_free_pgf(pgf);
         sceKernelExitProcess(0);
     }
 
     void ApplicationBridge::keyDownProc(int key) {
-        
+    	
     }
 
     void ApplicationBridge::keyUpProc(int key) {
-        
+
     }
 
     void ApplicationBridge::touchDownProc(int x, int y) {

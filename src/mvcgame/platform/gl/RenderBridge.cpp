@@ -115,11 +115,6 @@ namespace mvcgame {
 #endif        
     }
 
-    void RenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect, const TextureRegion& region)
-    {
-        IRenderBridge::drawTexture(texture, rect, region);
-    }
-
     void RenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices)
     {
         loadTexture(*texture);

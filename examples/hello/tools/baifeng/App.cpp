@@ -14,7 +14,7 @@ using namespace PureMVC;
 namespace BF {
     
     static std::string const AppName = "BFApp";
-    static Event* event = nullptr;
+    static Event* _event = nullptr;
     
     void App::Fire() {
         Facade::getInstance(AppName);
@@ -44,10 +44,10 @@ namespace BF {
         return *Facade::getInstance(AppName)->retrieveMediator(mediatorName);
     }
     
-    Event& App::Event() {
-        if (event == nullptr) {
-            event = new class Event();
+    Event& App::event() {
+        if (_event == nullptr) {
+            _event = new class Event();
         }
-        return *event;
+        return *_event;
     }
 }

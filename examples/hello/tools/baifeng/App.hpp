@@ -27,7 +27,7 @@ namespace BF {
         static PureMVC::IMediator& removeMediator( std::string mediatorName );
         static PureMVC::IMediator& getMediator( std::string mediatorName );
     public:
-        static Event& Event();
+        static Event& event();
     };
 }
 

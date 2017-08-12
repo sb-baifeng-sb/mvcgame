@@ -1,5 +1,5 @@
 
-#include <base/Application.hpp>
+#include <app/base/Application.hpp>
 #include <mvcgame/platform/vita/ApplicationBridge.hpp>
 
 int main(int argc, char *argv[]) {

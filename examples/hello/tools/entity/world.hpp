@@ -7,6 +7,16 @@
 #include <string>
 #include <memory>
 
+#ifdef PSVITA
+namespace std {
+    // c++14
+    template<typename T, typename... Args>
+    unique_ptr<T> make_unique(Args&&... args) {
+        return unique_ptr<T>(new T(forward<Args>(args)...));
+    }
+}
+#endif
+
 namespace entity
 {
 

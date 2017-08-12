@@ -28,7 +28,7 @@ namespace mvcgame {
 
 	}
 
-    void RenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices)
+    void RenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices, const Color& color)
     {
 
     }

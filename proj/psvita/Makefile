@@ -38,8 +38,11 @@ LITE2D_CPP := $(wildcard $(LITE2D_ROOT)/mvcgame/action/*.cpp) \
 				$(wildcard $(LITE2D_ROOT)/mvcgame/view/*.cpp) \
 				$(wildcard $(THIRD_ROOT)/spine/src/spine/*.c)
 
-LITE2D_CPP += $(wildcard $(APP_ROOT)/base/*.cpp) \
-				$(wildcard $(APP_ROOT)/controller/*.cpp)
+LITE2D_CPP += $(wildcard $(APP_ROOT)/app/base/*.cpp) \
+				$(wildcard $(APP_ROOT)/app/controller/*.cpp) \
+				$(wildcard $(APP_ROOT)/tools/baifeng/*.cpp) \
+				$(wildcard $(APP_ROOT)/tools/entity/*.cpp) \
+				$(wildcard $(APP_ROOT)/tools/puremvc/*.cpp)
 
 LITE2D_OBJS := $(patsubst %.cpp, %.o, $(LITE2D_CPP))
 LITE2D_OBJS := $(patsubst %.c, %.o, $(LITE2D_OBJS))

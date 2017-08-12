@@ -1,11 +1,12 @@
 
-#include "hello/base/ServiceLocator.hpp"
+#include "hello/app/base/ServiceLocator.hpp"
 
 #include <mvcgame/texture/PngTextureLoader.hpp>
 #include <mvcgame/texture/GdxTextureAtlasLoader.hpp>
 #include <mvcgame/texture/CocosTextureAtlasLoader.hpp>
 #include <mvcgame/font/FntFontAtlasLoader.hpp>
 #include <mvcgame/skeleton/SpineSkeletonLoader.hpp>
+#include <mvcgame/tile/TmxTileMapLoader.hpp>
 
 using namespace mvcgame;
 
@@ -39,6 +40,12 @@ ServiceLocator::ServiceLocator()
     std::unique_ptr<SpineSkeletonLoader> spine(new SpineSkeletonLoader());
     spine->setTextureAtlasManager(_textureAtlases);
     _skeletons.add(std::move(spine), "json");
+
+	std::unique_ptr<TmxTileMapLoader> tmx(new TmxTileMapLoader());
+	tmx->setStreamManager(_assetStreams);
+	tmx->setTextureManager(_textures);
+	_tileMaps.setStreamManager(_assetStreams);
+	_tileMaps.add(std::move(tmx), "tmx");
 }
 
 AssetManager<SpineSkeleton>& ServiceLocator::getSkeletons()
@@ -64,4 +71,9 @@ AssetManager<TextureAtlas>& ServiceLocator::getTextureAtlases()
 AssetManager<FontAtlas>& ServiceLocator::getFontAtlases()
 {
     return _fontAtlases;
+}
+
+AssetManager<TileMap>& ServiceLocator::getTileMaps()
+{
+	return _tileMaps;
 }

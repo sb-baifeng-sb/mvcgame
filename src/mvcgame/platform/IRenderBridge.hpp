@@ -64,7 +64,14 @@ namespace mvcgame {
          @param texture texture to draw         
          @param vertices pairs of texture and position points
          */
-        virtual void drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices) = 0;
+        virtual void drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices);
+
+		/**
+		Should draw a texture
+		@param texture texture to draw
+		@param vertices pairs of texture and position points
+		*/
+		virtual void drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices, const Color& color) = 0;
 
         /**
          Should draw a texture

@@ -10,30 +10,96 @@
     <Filter Include="app\controller">
       <UniqueIdentifier>{bedb7128-ed00-4643-8e82-1289847f0e90}</UniqueIdentifier>
     </Filter>
+    <Filter Include="tools">
+      <UniqueIdentifier>{e4ec83bf-30f4-4873-bd73-8cecd0c60b35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\baifeng">
+      <UniqueIdentifier>{ae92f615-f108-4550-a959-da99f0f6feae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\entity">
+      <UniqueIdentifier>{7fe8f76a-c1b6-4a94-96b8-2296db133cff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\puremvc">
+      <UniqueIdentifier>{6f24f2c2-b7be-4609-98e4-f1c02ae7e0c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\examples\hello\platform\win\main.cpp">
       <Filter>app</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\examples\hello\base\Application.cpp">
+    <ClCompile Include="..\..\..\examples\hello\app\base\Application.cpp">
       <Filter>app\base</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\examples\hello\base\ServiceLocator.cpp">
+    <ClCompile Include="..\..\..\examples\hello\app\base\ServiceLocator.cpp">
       <Filter>app\base</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\examples\hello\controller\MainController.cpp">
+    <ClCompile Include="..\..\..\examples\hello\app\controller\MainController.cpp">
       <Filter>app\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\hello\tools\baifeng\App.cpp">
+      <Filter>tools\baifeng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\hello\tools\baifeng\Event.cpp">
+      <Filter>tools\baifeng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\hello\tools\entity\component.cpp">
+      <Filter>tools\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\hello\tools\entity\entity.cpp">
+      <Filter>tools\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\hello\tools\entity\event.cpp">
+      <Filter>tools\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\hello\tools\entity\system.cpp">
+      <Filter>tools\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\hello\tools\entity\world.cpp">
+      <Filter>tools\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\hello\tools\puremvc\pmvcpp.cpp">
+      <Filter>tools\puremvc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\examples\hello\base\Application.hpp">
+    <ClInclude Include="..\..\..\examples\hello\app\base\Application.hpp">
       <Filter>app\base</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\examples\hello\base\ServiceLocator.hpp">
+    <ClInclude Include="..\..\..\examples\hello\app\base\ServiceLocator.hpp">
       <Filter>app\base</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\examples\hello\controller\MainController.hpp">
+    <ClInclude Include="..\..\..\examples\hello\app\controller\MainController.hpp">
       <Filter>app\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\tools\baifeng\Event.hpp">
+      <Filter>tools\baifeng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\tools\baifeng\App.hpp">
+      <Filter>tools\baifeng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\component.hpp">
+      <Filter>tools\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\Config.hpp">
+      <Filter>tools\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\entity.hpp">
+      <Filter>tools\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\event.hpp">
+      <Filter>tools\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\pool.hpp">
+      <Filter>tools\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\system.hpp">
+      <Filter>tools\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\world.hpp">
+      <Filter>tools\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\hello\tools\puremvc\pmvcpp.h">
+      <Filter>tools\puremvc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

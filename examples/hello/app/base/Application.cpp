@@ -1,7 +1,7 @@
 
 
-#include "hello/controller/MainController.hpp"
-#include "hello/base/Application.hpp"
+#include "hello/app/controller/MainController.hpp"
+#include "hello/app/base/Application.hpp"
 #include "ServiceLocator.hpp"
 #include <mvcgame/asset/FileStreamLoader.hpp>
 

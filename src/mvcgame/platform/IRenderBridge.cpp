@@ -1,6 +1,7 @@
 
 #include <mvcgame/platform/IRenderBridge.hpp>
 #include <mvcgame/texture/TextureRegion.hpp>
+#include <mvcgame/base/Color.hpp>
 
 namespace mvcgame {
 
@@ -45,6 +46,11 @@ namespace mvcgame {
         }
         return vertices; 
     }
+
+	void IRenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices)
+	{
+		drawTexture(texture, vertices, Color(255, 255, 255, 255));
+	}
 
     void IRenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect, const TextureRegion& region)
     {

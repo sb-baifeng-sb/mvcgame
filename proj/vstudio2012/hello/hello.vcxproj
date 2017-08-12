@@ -74,15 +74,33 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\examples\hello\base\Application.cpp" />
-    <ClCompile Include="..\..\..\examples\hello\base\ServiceLocator.cpp" />
-    <ClCompile Include="..\..\..\examples\hello\controller\MainController.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\app\base\Application.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\app\base\ServiceLocator.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\app\controller\MainController.cpp" />
     <ClCompile Include="..\..\..\examples\hello\platform\win\main.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\tools\baifeng\App.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\tools\baifeng\Event.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\tools\entity\component.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\tools\entity\entity.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\tools\entity\event.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\tools\entity\system.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\tools\entity\world.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\tools\puremvc\pmvcpp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\examples\hello\base\Application.hpp" />
-    <ClInclude Include="..\..\..\examples\hello\base\ServiceLocator.hpp" />
-    <ClInclude Include="..\..\..\examples\hello\controller\MainController.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\app\base\Application.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\app\base\ServiceLocator.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\app\controller\MainController.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\tools\baifeng\App.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\tools\baifeng\Event.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\component.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\Config.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\entity.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\event.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\pool.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\system.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\tools\entity\world.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\tools\puremvc\pmvcpp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

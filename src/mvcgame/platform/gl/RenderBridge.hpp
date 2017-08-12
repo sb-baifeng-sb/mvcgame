@@ -20,7 +20,7 @@ namespace mvcgame {
         RenderBridge();
         void setTransform(const Transform& transform);        
         void drawPolygon(const Points& verts, const Color& color);
-        void drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices);
+		virtual void drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices, const Color& color);
 		void beforeDraw();
 		void afterDraw();
     };

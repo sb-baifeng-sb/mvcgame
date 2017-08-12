@@ -1,6 +1,6 @@
 
-#include "hello/controller/MainController.hpp"
-#include "hello/base/ServiceLocator.hpp"
+#include "hello/app/controller/MainController.hpp"
+#include "hello/app/base/ServiceLocator.hpp"
 
 #include <mvcgame/controller/RootViewController.hpp>
 #include <mvcgame/view/View.hpp>
@@ -13,6 +13,8 @@
 #include <mvcgame/font/FontSheet.hpp>
 #include <mvcgame/view/SpineSkeletonView.hpp>
 #include <mvcgame/action/TweenAction.hpp>
+#include <mvcgame/view/TileMapView.hpp>
+#include <mvcgame/view/PanZoomView.hpp>
 
 using namespace mvcgame;
 
@@ -27,12 +29,15 @@ void MainController::controllerAdded()
 	bg->getFrame().size = getRoot().getView().getSize();
 	bg->getFrame().origin = bg->getFrame().size / 2;
 
-	if (true)
-	{
-		setView(bg);
-		return;
-	}
+	/*auto tileMap = ServiceLocator::get().getTileMaps().load("desert");
+	//std::cout << *tileMap << std::endl;
+	auto tileMapView = std::make_shared<TileMapView>(tileMap);
+	tileMapView->getFrame().origin = tileMapView->getFrame().size / 2;
+	tileMapView->setScale(0.5f);
 
+	setView(tileMapView);
+	return;*/
+	
 	auto guybrushAtlas = ServiceLocator::get().getTextureAtlases().load("guybrush");
 	_guybrush = std::make_shared<Sprite>(*guybrushAtlas);
 	_guybrush->getFrame().origin = bg->getFrame().size / 2;
@@ -91,14 +96,30 @@ void MainController::controllerAdded()
 	spineboy->addAnimation(true, 0);
 	spineboy->addAnimation("walk", true, 1);
 
+	auto powerupSke = ServiceLocator::get().getSkeletons().load("powerup");
+	auto powerup = std::make_shared<SpineSkeletonView>(powerupSke);
+	powerup->getFrame().origin = bg->getFrame().size / 2;
+	powerup->getFrame().origin.y -= 300;
+	powerup->setScale(0.5f);
+
+	//powerup->setAnimation("animation", true);
+	powerup->addAnimation("animation", true, 1);
+
 	bg->addChild(spineboy);
 	bg->addChild(dragon);
+	bg->addChild(powerup);
 
 	setView(bg);
 }
 
 void MainController::respondOnTouchStart(const TouchEvent& event)
 {
+	_guybrushTouched = true;
+	_guybrushTouchPoint = event.getPoints()[0];
+	if (_guybrush == NULL)
+	{
+		return;
+	}
 	std::cout << "GUYBRUSH" << std::endl;
 	_guybrushTouched = event.touched(*_guybrush);
 	if (_guybrushTouched)
@@ -116,7 +137,9 @@ void MainController::respondOnTouchUpdate(const TouchEvent& event)
 		auto point = event.getPoints()[0];
 		auto vec = point - _guybrushTouchPoint;
 		_guybrushTouchPoint = point;
-		_guybrush->getFrame().origin += vec;
+		//_guybrush->getFrame().origin += vec;
+		getView().getFrame().origin += vec;
+		std::cout << point;
 	}
 }
 

@@ -57,7 +57,7 @@ namespace mvcgame {
 		assert(_app);
 		assert(_argv);
 		glutInit(&_argc, _argv);
-		glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+		glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
 		glutInitWindowSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 		glutInitWindowPosition(200, 100);
 		glutCreateWindow("Lite2D");
@@ -87,7 +87,6 @@ namespace mvcgame {
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
 		glOrtho(-1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f);
-		//glOrtho(0, 2, 0, 2, -1, 1);
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
 	}

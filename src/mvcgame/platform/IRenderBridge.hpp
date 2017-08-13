@@ -59,13 +59,6 @@ namespace mvcgame {
          */
         virtual void drawPolygon(const Points& points, const Color& color) = 0;
 
-        /**
-         Should draw a texture
-         @param texture texture to draw         
-         @param vertices pairs of texture and position points
-         */
-        virtual void drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices);
-
 		/**
 		Should draw a texture
 		@param texture texture to draw
@@ -73,18 +66,18 @@ namespace mvcgame {
 		*/
 		virtual void drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices, const Color& color) = 0;
 
-        /**
-         Should draw a texture
-         @param texture texture to draw         
-         @param rect rectangle with hthe position of the texture
-         @param region region inside the texture
-         */
-        virtual void drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect, const TextureRegion& region);
+		/**
+		Should draw a texture
+		@param texture texture to draw
+		@param rect rectangle with hthe position of the texture
+		@param region region inside the texture
+		*/
+		virtual void drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect, const TextureRegion& region, const Color& color);
 
         /**
          Utility method that will st the texture region to the entire texture
          */
-        void drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect);
+		void drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect, const Color& color);
     };
 
 }

@@ -1,5 +1,6 @@
 
 #include <mvcgame/platform/BufferedTextureRenderBridge.hpp>
+#include <mvcgame/base/Color.hpp>
 
 namespace mvcgame {
 
@@ -73,7 +74,7 @@ namespace mvcgame {
             {
                 vertex.position *= inverse;
             }
-            _bridge.drawTexture(_bufferedTexture, _bufferedTextureVertices);
+            _bridge.drawTexture(_bufferedTexture, _bufferedTextureVertices, Color(255, 255, 255, 255));
             _bufferedTextureVertices.clear();
         }
     }

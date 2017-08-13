@@ -47,18 +47,14 @@ namespace mvcgame {
 		return vertices;
 	}
 
-	void IRenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Vertices& vertices)
+	void IRenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect, const TextureRegion& region, const Color& color)
 	{
-		drawTexture(texture, vertices, Color(255, 255, 255, 255));
+		drawTexture(texture, getTextureRectVertices(*texture, rect, region), color);
 	}
 
-	void IRenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect, const TextureRegion& region)
+	void IRenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect, const Color& color)
 	{
-		drawTexture(texture, getTextureRectVertices(*texture, rect, region));
+		drawTexture(texture, rect, TextureRegion(*texture), color);
 	}
 
-	void IRenderBridge::drawTexture(std::shared_ptr<const Texture> texture, const Rect& rect)
-	{
-		drawTexture(texture, rect, TextureRegion(*texture));
-	}
 }

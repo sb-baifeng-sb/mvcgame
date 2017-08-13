@@ -4,6 +4,7 @@
 
 #include <mvcgame/view/View.hpp>
 #include <mvcgame/texture/SpriteSheet.hpp>
+#include <mvcgame/base/Color.hpp>
 #include <memory>
 
 namespace mvcgame {
@@ -13,11 +14,12 @@ namespace mvcgame {
     public:
         typedef SpriteSheet Sheet;
     private:
-        bool _paused;        
-        unsigned _spriteFrame;
-        Sheet _sheet;        
-        unsigned _spriteFrameDuration;
-        unsigned _spriteFrameUpdates;
+        bool _paused;
+		unsigned _spriteFrame;
+		unsigned _spriteFrameDuration;
+		unsigned _spriteFrameUpdates;
+        Sheet _sheet;
+		Color _color;
     public:
         Sprite();
         Sprite(const Sheet& sheet);
@@ -25,6 +27,12 @@ namespace mvcgame {
         const Sheet& getSheet() const;
         void setSheet(const Sheet& sheet, bool changeSize=true);
         void setSheet(std::shared_ptr<const Texture> texture, bool changeSize=true);
+
+		void setColor(const Color& color);
+		Color const& getColor();
+
+		void setAlpha(uint8_t a);
+		uint8_t getAlpha();
 
         unsigned setSpriteFrame() const;
         void setSpriteFrame(unsigned frame);

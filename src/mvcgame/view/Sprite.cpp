@@ -6,13 +6,13 @@ namespace mvcgame {
 
     Sprite::Sprite() :
     _paused(false), _spriteFrame(0),
-    _spriteFrameDuration(1), _spriteFrameUpdates(0)
+	_spriteFrameDuration(1), _spriteFrameUpdates(0), _color(255, 255, 255, 255)
     {
     }
 
     Sprite::Sprite(const Sheet& sheet) :
     _paused(false), _spriteFrame(0),
-    _spriteFrameDuration(1), _spriteFrameUpdates(0)    
+	_spriteFrameDuration(1), _spriteFrameUpdates(0), _color(255, 255, 255, 255)
     {
         setSheet(sheet);
     }
@@ -89,9 +89,29 @@ namespace mvcgame {
         if(_sheet.getLength()>_spriteFrame)
         {
             const SpriteFrame& frame = _sheet.getFrame(_spriteFrame);
-            getBridge().drawTexture(frame.getTexture(), getFrame().size, frame.getRegion());
+            getBridge().drawTexture(frame.getTexture(), getFrame().size, frame.getRegion(), _color);
         }
         View::draw();
     }
+
+	void Sprite::setColor(const Color& color)
+	{
+		_color = color;
+	}
+
+	Color const& Sprite::getColor()
+	{
+		return _color;
+	}
+
+	void Sprite::setAlpha(uint8_t a)
+	{
+		setColor(Color(_color.r, _color.g, _color.b, a));
+	}
+
+	uint8_t Sprite::getAlpha()
+	{
+		return _color.a;
+	}
 
 }

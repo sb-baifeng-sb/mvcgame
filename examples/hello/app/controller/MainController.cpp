@@ -44,6 +44,7 @@ void MainController::controllerAdded()
 	_guybrush->getFrame().origin.x -= 150;
 	_guybrush->setScale(0.5);
 	_guybrush->setSpriteFrameDuration(20);
+	_guybrush->setAlpha(200);
 	bg->addChild(_guybrush);
 
 	/*auto colorMask = std::make_shared<ColorView>();

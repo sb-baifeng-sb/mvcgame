@@ -4,6 +4,7 @@
 #include <mvcgame/event/Events.hpp>
 #include <mvcgame/platform/IRenderBridge.hpp>
 #include <mvcgame/texture/TextureAtlas.hpp>
+#include <mvcgame/base/Color.hpp>
 
 namespace mvcgame {
 
@@ -129,7 +130,7 @@ namespace mvcgame {
             vertexArray.push_back(vertices[2]);
             vertexArray.push_back(vertices[3]);
         }
-        getBridge().drawTexture(_skeleton->getTextureAtlas()->getTexture(), vertexArray);       
+        getBridge().drawTexture(_skeleton->getTextureAtlas()->getTexture(), vertexArray, Color(255, 255, 255, 255));       
         View::draw();
     }
 

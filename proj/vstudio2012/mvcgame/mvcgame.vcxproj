@@ -41,8 +41,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)/../../src;$(SolutionDir)/../../lib;$(SolutionDir)/../../lib/spine/include;$(SolutionDir)/../../lib/libpng/include;$(SolutionDir)/../../lib/libzlib/include;$(SolutionDir)/../../lib/glut/include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)/../../lib/libzlib/lib;$(SolutionDir)/../../lib/libpng/lib;$(SolutionDir)/../../lib/glut/lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)/../../src;$(SolutionDir)/../../lib;$(SolutionDir)/../../lib/spine/include;$(SolutionDir)/../../lib/libpng/include;$(SolutionDir)/../../lib/libzlib/include;$(SolutionDir)/../../lib/glut/include;$(SolutionDir)/../../lib/sdl2/include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)/../../lib/libzlib/lib;$(SolutionDir)/../../lib/libpng/lib;$(SolutionDir)/../../lib/glut/lib;$(SolutionDir)/../../lib/lib/x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

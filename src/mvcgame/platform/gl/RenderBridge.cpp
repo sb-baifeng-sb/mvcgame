@@ -161,7 +161,7 @@ namespace mvcgame {
 			std::cout << "error " << err << std::endl;
 		}
 		std::cout << "<<<<" << std::endl;
-#endif        
+#endif
 	}
 
 	void RenderBridge::beforeDraw()

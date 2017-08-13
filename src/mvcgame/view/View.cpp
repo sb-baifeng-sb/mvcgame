@@ -7,237 +7,237 @@
 
 namespace mvcgame {
 
-    View::View() : _parent(nullptr), _root(nullptr),
-    _inverseDirty(true), _rootTransformDirty(true), _rootInverseDirty(true)
-    {
-    }
+	View::View() : _parent(nullptr), _root(nullptr),
+		_inverseDirty(true), _rootTransformDirty(true), _rootInverseDirty(true)
+	{
+	}
 
-    View::View(const View& v) :
-    _parent(v._parent), _root(v._root), _frame(v._frame), _scale(v._scale),
-    _anchor(v._anchor), _rotation(v._rotation),
-    _inverseDirty(true), _rootTransformDirty(true), _rootInverseDirty(true)
-    {
+	View::View(const View& v) :
+		_parent(v._parent), _root(v._root), _frame(v._frame), _scale(v._scale),
+		_anchor(v._anchor), _rotation(v._rotation),
+		_inverseDirty(true), _rootTransformDirty(true), _rootInverseDirty(true)
+	{
 
-    }
+	}
 
-    View::View(const Rect& f, const Scale& s, const Anchor& a, const Rotation& r) :
-    _parent(nullptr), _root(nullptr), _frame(f), _scale(s), _anchor(a), _rotation(r),
-    _inverseDirty(true), _rootTransformDirty(true), _rootInverseDirty(true)    
-    {
-    }
+	View::View(const Rect& f, const Scale& s, const Anchor& a, const Rotation& r) :
+		_parent(nullptr), _root(nullptr), _frame(f), _scale(s), _anchor(a), _rotation(r),
+		_inverseDirty(true), _rootTransformDirty(true), _rootInverseDirty(true)
+	{
+	}
 
-    View::~View()
-    {
-    }
+	View::~View()
+	{
+	}
 
-    void View::parentTransformChanged()
-    {
-        _rootTransformDirty = true;
-        _rootTransformDirty = true;
-    }
+	void View::parentTransformChanged()
+	{
+		_rootTransformDirty = true;
+		_rootTransformDirty = true;
+	}
 
-    void View::update()
-    {
-        if(_transform.update(_frame, _anchor, _rotation, _scale))
-        {
-            _inverseDirty = true;
-            _rootTransformDirty = true;
-            _rootInverseDirty = true;
-            getRootTransform();
-            for(Child& child : getChildren())
-            {
-                child.first->parentTransformChanged();
-            }
-        }
-        BaseView::update();
-    }
+	void View::update()
+	{
+		if (_transform.update(_frame, _anchor, _rotation, _scale))
+		{
+			_inverseDirty = true;
+			_rootTransformDirty = true;
+			_rootInverseDirty = true;
+			getRootTransform();
+			for (Child& child : getChildren())
+			{
+				child.first->parentTransformChanged();
+			}
+		}
+		BaseView::update();
+	}
 
-    void View::drawAsChild()
-    {
-        getBridge().setTransform(getRootTransform());
-        draw();
-    }
+	void View::drawAsChild()
+	{
+		getBridge().setTransform(getRootTransform());
+		draw();
+	}
 
-    Rect& View::getFrame()
-    {
-        return _frame;
-    }
+	Rect& View::getFrame()
+	{
+		return _frame;
+	}
 
-    const Rect& View::getFrame() const
-    {
-        return _frame;
-    }
+	const Rect& View::getFrame() const
+	{
+		return _frame;
+	}
 
-    void View::setFrame(const Rect& rect)
-    {
-        _frame = rect;
-    }
+	void View::setFrame(const Rect& rect)
+	{
+		_frame = rect;
+	}
 
-    Rect View::getBoundingBox() const
-    {
-        Rect box = _frame;
-        box.origin -= _anchor*box.size;
-        return box;
-    }
-    
-    Rotation& View::getRotation()
-    {
-        return _rotation;
-    }
+	Rect View::getBoundingBox() const
+	{
+		Rect box = _frame;
+		box.origin -= _anchor*box.size;
+		return box;
+	}
 
-    const Rotation& View::getRotation() const
-    {
-        return _rotation;
-    }
+	Rotation& View::getRotation()
+	{
+		return _rotation;
+	}
 
-    void View::setRotation(const Rotation& r)
-    {
-        _rotation = r;
-    }
-        
-    Scale& View::getScale()
-    {
-        return _scale;
-    }
+	const Rotation& View::getRotation() const
+	{
+		return _rotation;
+	}
 
-    const Scale& View::getScale() const
-    {
-        return _scale;
-    }
+	void View::setRotation(const Rotation& r)
+	{
+		_rotation = r;
+	}
 
-    void View::setScale(const Scale& s)
-    {
-        _scale = s;
-    }
+	Scale& View::getScale()
+	{
+		return _scale;
+	}
 
-    Anchor& View::getAnchor()
-    {
-        return _anchor;
-    }
+	const Scale& View::getScale() const
+	{
+		return _scale;
+	}
 
-    const Anchor& View::getAnchor() const
-    {
-        return _anchor;
-    }
+	void View::setScale(const Scale& s)
+	{
+		_scale = s;
+	}
 
-    void View::setAnchor(const Anchor& a)
-    {
-        _anchor = a;
-    }
+	Anchor& View::getAnchor()
+	{
+		return _anchor;
+	}
 
-    const Transform& View::getTransform() const
-    {
-        return _transform;
-    }
+	const Anchor& View::getAnchor() const
+	{
+		return _anchor;
+	}
 
-    const Transform& View::getRootTransform() const
-    {
-        if(_rootTransformDirty)
-        {
-            _rootTransform = _transform;
-            if(_parent)
-            {
-                _rootTransform *= _parent->getRootTransform();
-            }
-            else if(_root)
-            {
-                _rootTransform *= _root->getTransform();
-            }
-            _rootTransformDirty = false;
-        }
-        return _rootTransform;        
-    }
+	void View::setAnchor(const Anchor& a)
+	{
+		_anchor = a;
+	}
 
-    const Transform& View::getInverse() const
-    {
-        if(_inverseDirty)
-        {
-            _inverse = _transform.invert();        
-            _inverseDirty = false;
-        }
-        return _inverse;        
-    }
+	const Transform& View::getTransform() const
+	{
+		return _transform;
+	}
 
-    const Transform& View::getRootInverse() const
-    {
-        if(_rootInverseDirty)
-        {
-            _rootInverse = getRootTransform().invert();
-            _rootInverseDirty = false;
-        }
-        return _rootInverse;
-    }
+	const Transform& View::getRootTransform() const
+	{
+		if (_rootTransformDirty)
+		{
+			_rootTransform = _transform;
+			if (_parent)
+			{
+				_rootTransform *= _parent->getRootTransform();
+			}
+			else if (_root)
+			{
+				_rootTransform *= _root->getTransform();
+			}
+			_rootTransformDirty = false;
+		}
+		return _rootTransform;
+	}
 
-    void View::addChild(std::shared_ptr<View> child, unsigned layer)
-    {
-        child->setParent(*this);
-        BaseView::addChild(child, layer);
-    }
+	const Transform& View::getInverse() const
+	{
+		if (_inverseDirty)
+		{
+			_inverse = _transform.invert();
+			_inverseDirty = false;
+		}
+		return _inverse;
+	}
 
-    void View::setParent(View& parent)
-    {
-        assert(!_parent);
-        _parent = &parent;
-    }
-    
-    View& View::getParent()
-    {
-        assert(_parent);
-        return *_parent;
-    }
-    
-    const View& View::getParent() const
-    {
-        assert(_parent);
-        return *_parent;
-    }
+	const Transform& View::getRootInverse() const
+	{
+		if (_rootInverseDirty)
+		{
+			_rootInverse = getRootTransform().invert();
+			_rootInverseDirty = false;
+		}
+		return _rootInverse;
+	}
 
-    void View::setRoot(RootView& root)
-    {
-        _root = &root;
-    }
+	void View::addChild(std::shared_ptr<View> child, unsigned layer)
+	{
+		child->setParent(*this);
+		BaseView::addChild(child, layer);
+	}
 
-    RootView& View::getRoot()
-    {
-        if(_root)
-        {
-            return *_root;
-        }
-        else
-        {
-            return getParent().getRoot();
-        }
-    }
+	void View::setParent(View& parent)
+	{
+		assert(!_parent);
+		_parent = &parent;
+	}
 
-    const RootView& View::getRoot() const
-    {
-        if(_root)
-        {
-            return *_root;
-        }
-        else
-        {
-            return getParent().getRoot();
-        }
-    }
+	View& View::getParent()
+	{
+		assert(_parent);
+		return *_parent;
+	}
 
-    IRenderBridge& View::getBridge()
-    {
-        return getRoot().getBridge();
-    }
+	const View& View::getParent() const
+	{
+		assert(_parent);
+		return *_parent;
+	}
 
-    void View::removeFromParent()
-    {
-        if(_parent != nullptr)
-        {
-            View* p = _parent;
-            _parent = nullptr;            
-            p->removeChild(*this);
-        }
-    }
+	void View::setRoot(RootView& root)
+	{
+		_root = &root;
+	}
 
-    bool View::respondToTouchPoint(const Point& p, const TouchEvent& event)
-    {
-        return _frame.size.contains(p);
-    }  
+	RootView& View::getRoot()
+	{
+		if (_root)
+		{
+			return *_root;
+		}
+		else
+		{
+			return getParent().getRoot();
+		}
+	}
+
+	const RootView& View::getRoot() const
+	{
+		if (_root)
+		{
+			return *_root;
+		}
+		else
+		{
+			return getParent().getRoot();
+		}
+	}
+
+	IRenderBridge& View::getBridge()
+	{
+		return getRoot().getBridge();
+	}
+
+	void View::removeFromParent()
+	{
+		if (_parent != nullptr)
+		{
+			View* p = _parent;
+			_parent = nullptr;
+			p->removeChild(*this);
+		}
+	}
+
+	bool View::respondToTouchPoint(const Point& p, const TouchEvent& event)
+	{
+		return _frame.size.contains(p);
+	}
 }

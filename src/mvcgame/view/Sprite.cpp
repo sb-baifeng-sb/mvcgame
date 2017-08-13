@@ -99,7 +99,7 @@ namespace mvcgame {
 		_color = color;
 	}
 
-	Color const& Sprite::getColor()
+	Color const& Sprite::getColor() const
 	{
 		return _color;
 	}
@@ -109,7 +109,7 @@ namespace mvcgame {
 		setColor(Color(_color.r, _color.g, _color.b, a));
 	}
 
-	uint8_t Sprite::getAlpha()
+	uint8_t Sprite::getAlpha() const
 	{
 		return _color.a;
 	}

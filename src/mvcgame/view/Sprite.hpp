@@ -29,10 +29,10 @@ namespace mvcgame {
         void setSheet(std::shared_ptr<const Texture> texture, bool changeSize=true);
 
 		void setColor(const Color& color);
-		Color const& getColor();
+		Color const& getColor() const;
 
 		void setAlpha(uint8_t a);
-		uint8_t getAlpha();
+		uint8_t getAlpha() const;
 
         unsigned setSpriteFrame() const;
         void setSpriteFrame(unsigned frame);

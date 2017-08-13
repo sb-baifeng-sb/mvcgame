@@ -32,6 +32,8 @@ namespace mvcgame {
 		mutable Transform _rootTransform;
 		mutable bool _rootInverseDirty;
 		mutable Transform _rootInverse;
+	private:
+		bool _visiable;
 	protected:
 		void setParent(View& parent);
 		IRenderBridge& getBridge();
@@ -61,6 +63,9 @@ namespace mvcgame {
 		Anchor& getAnchor();
 		const Anchor& getAnchor() const;
 		void setAnchor(const Anchor& a);
+
+		void setVisiable(bool v);
+		bool getVisiable() const;
 
 		View& getParent();
 		const View& getParent() const;

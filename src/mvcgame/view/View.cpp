@@ -7,21 +7,21 @@
 
 namespace mvcgame {
 
-	View::View() : _parent(nullptr), _root(nullptr),
+	View::View() : _parent(nullptr), _root(nullptr), _visiable(true),
 		_inverseDirty(true), _rootTransformDirty(true), _rootInverseDirty(true)
 	{
 	}
 
 	View::View(const View& v) :
 		_parent(v._parent), _root(v._root), _frame(v._frame), _scale(v._scale),
-		_anchor(v._anchor), _rotation(v._rotation),
+		_anchor(v._anchor), _rotation(v._rotation), _visiable(true),
 		_inverseDirty(true), _rootTransformDirty(true), _rootInverseDirty(true)
 	{
 
 	}
 
 	View::View(const Rect& f, const Scale& s, const Anchor& a, const Rotation& r) :
-		_parent(nullptr), _root(nullptr), _frame(f), _scale(s), _anchor(a), _rotation(r),
+		_parent(nullptr), _root(nullptr), _frame(f), _scale(s), _anchor(a), _rotation(r), _visiable(true),
 		_inverseDirty(true), _rootTransformDirty(true), _rootInverseDirty(true)
 	{
 	}
@@ -240,4 +240,15 @@ namespace mvcgame {
 	{
 		return _frame.size.contains(p);
 	}
+
+	void View::setVisiable(bool v)
+	{
+		_visiable = v;
+	}
+
+	bool View::getVisiable() const
+	{
+		return _visiable;
+	}
+
 }

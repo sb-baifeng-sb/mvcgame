@@ -30,7 +30,7 @@ namespace mvcgame {
 
         void addChild(std::shared_ptr<View> view, unsigned layer=0);
         
-        void draw();
+        void drawView();
 
         IRenderBridge& getBridge();
 

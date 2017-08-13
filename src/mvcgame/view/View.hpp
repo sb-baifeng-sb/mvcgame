@@ -44,6 +44,7 @@ namespace mvcgame {
 		View(const Rect& f, const Scale& s, const Anchor& a, const Rotation& r);
 		virtual ~View();
 
+		virtual void drawView();
 		virtual void update();
 		void drawAsChild();
 

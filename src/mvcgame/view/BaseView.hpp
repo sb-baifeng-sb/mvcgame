@@ -32,6 +32,8 @@ namespace mvcgame {
 
         virtual void respondOnUpdate(const UpdateEvent& event);
         virtual void update();
+		virtual void drawView();
+	protected:
         virtual void draw();
     };
 }

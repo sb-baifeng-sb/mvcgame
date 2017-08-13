@@ -36,6 +36,14 @@ namespace mvcgame {
 		_rootTransformDirty = true;
 	}
 
+	void View::drawView()
+	{
+		if (!_visiable) {
+			return;
+		}
+		BaseView::drawView();
+	}
+
 	void View::update()
 	{
 		if (_transform.update(_frame, _anchor, _rotation, _scale))
@@ -55,7 +63,7 @@ namespace mvcgame {
 	void View::drawAsChild()
 	{
 		getBridge().setTransform(getRootTransform());
-		draw();
+		drawView();
 	}
 
 	Rect& View::getFrame()

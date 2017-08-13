@@ -39,10 +39,10 @@ namespace mvcgame {
         BaseView::addChild(view, layer);
     }
 
-    void RootView::draw()
+    void RootView::drawView()
     {
         getBridge().beforeDraw();
-        BaseView::draw();
+        BaseView::drawView();
         getBridge().afterDraw();
     }
 

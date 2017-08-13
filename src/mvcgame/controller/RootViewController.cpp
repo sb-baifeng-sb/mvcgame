@@ -61,7 +61,7 @@ namespace mvcgame {
         if(_framePassed > _frameDelay)
         {
             _framePassed = 0.0f;
-            _view.draw();
+            _view.drawView();
         }
     }
 

@@ -66,10 +66,15 @@ namespace mvcgame {
 
     void BaseView::draw()
     {
-        for(Child& child : _children)
-        {
-            child.first->drawAsChild();
-        }            
+
     }
+
+	void BaseView::drawView()
+	{
+		draw();
+		for (Child& child : _children) {
+			child.first->drawAsChild();
+		}
+	}
 
 }

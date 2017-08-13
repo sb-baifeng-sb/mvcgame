@@ -270,6 +270,9 @@
     <ClCompile Include="..\..\..\src\mvcgame\view\View.cpp">
       <Filter>Framework\view</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\mvcgame\view\Button.cpp">
+      <Filter>Framework\view</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\lib\spine\src\spine\Json.h">
@@ -462,6 +465,9 @@
       <Filter>Framework\view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\mvcgame\view\View.hpp">
+      <Filter>Framework\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mvcgame\view\Button.hpp">
       <Filter>Framework\view</Filter>
     </ClInclude>
   </ItemGroup>

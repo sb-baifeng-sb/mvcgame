@@ -84,6 +84,8 @@ namespace mvcgame {
 
 		bool respondToTouchPoint(const Point& p, const TouchEvent& event);
 	};
+
+	typedef View NodeView;
 }
 
 #endif

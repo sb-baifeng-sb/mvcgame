@@ -77,6 +77,7 @@
     <ClCompile Include="..\..\..\examples\hello\app\base\Application.cpp" />
     <ClCompile Include="..\..\..\examples\hello\app\base\ServiceLocator.cpp" />
     <ClCompile Include="..\..\..\examples\hello\app\controller\MainController.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\app\view\StageView.cpp" />
     <ClCompile Include="..\..\..\examples\hello\platform\win\main.cpp" />
     <ClCompile Include="..\..\..\examples\hello\tools\baifeng\App.cpp" />
     <ClCompile Include="..\..\..\examples\hello\tools\baifeng\Event.cpp" />
@@ -86,11 +87,13 @@
     <ClCompile Include="..\..\..\examples\hello\tools\entity\system.cpp" />
     <ClCompile Include="..\..\..\examples\hello\tools\entity\world.cpp" />
     <ClCompile Include="..\..\..\examples\hello\tools\puremvc\pmvcpp.cpp" />
+    <ClCompile Include="StageView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\examples\hello\app\base\Application.hpp" />
     <ClInclude Include="..\..\..\examples\hello\app\base\ServiceLocator.hpp" />
     <ClInclude Include="..\..\..\examples\hello\app\controller\MainController.hpp" />
+    <ClInclude Include="..\..\..\examples\hello\app\view\StageView.hpp" />
     <ClInclude Include="..\..\..\examples\hello\tools\baifeng\App.hpp" />
     <ClInclude Include="..\..\..\examples\hello\tools\baifeng\Event.hpp" />
     <ClInclude Include="..\..\..\examples\hello\tools\entity\component.hpp" />
@@ -101,6 +104,7 @@
     <ClInclude Include="..\..\..\examples\hello\tools\entity\system.hpp" />
     <ClInclude Include="..\..\..\examples\hello\tools\entity\world.hpp" />
     <ClInclude Include="..\..\..\examples\hello\tools\puremvc\pmvcpp.h" />
+    <ClInclude Include="StageView.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -142,6 +142,7 @@
     <ClCompile Include="..\..\..\src\mvcgame\tile\TmxTileMapLoader.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\util\StringUtils.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\BaseView.cpp" />
+    <ClCompile Include="..\..\..\src\mvcgame\view\Button.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\ColorView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\NineScaleView.cpp" />
     <ClCompile Include="..\..\..\src\mvcgame\view\PanZoomView.cpp" />
@@ -207,6 +208,7 @@
     <ClInclude Include="..\..\..\src\mvcgame\tile\TmxTileMapLoader.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\util\StringUtils.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\BaseView.hpp" />
+    <ClInclude Include="..\..\..\src\mvcgame\view\Button.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\ColorView.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\IViewMask.hpp" />
     <ClInclude Include="..\..\..\src\mvcgame\view\NineScaleView.hpp" />

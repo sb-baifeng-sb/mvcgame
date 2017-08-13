@@ -29,7 +29,7 @@ namespace mvcgame {
     {
     public:
 
-        typedef std::vector<Point> Points;        
+        typedef std::vector<Point> Points;
         typedef std::vector<Vertex> Vertices;
 
     protected:
@@ -52,7 +52,7 @@ namespace mvcgame {
         /**
          Set a base transform
          */
-        virtual void setTransform(const Transform& transform) = 0;        
+        virtual void setTransform(const Transform& transform) = 0;
 
         /**
          Should draw a polygon of a given color

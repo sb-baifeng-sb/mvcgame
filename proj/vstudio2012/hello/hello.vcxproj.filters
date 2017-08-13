@@ -22,6 +22,9 @@
     <Filter Include="tools\puremvc">
       <UniqueIdentifier>{6f24f2c2-b7be-4609-98e4-f1c02ae7e0c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="app\view">
+      <UniqueIdentifier>{f49cf422-58ce-4042-a5b8-02603a03daf5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\examples\hello\platform\win\main.cpp">
@@ -59,6 +62,10 @@
     </ClCompile>
     <ClCompile Include="..\..\..\examples\hello\tools\puremvc\pmvcpp.cpp">
       <Filter>tools\puremvc</Filter>
+    </ClCompile>
+    <ClCompile Include="StageView.cpp" />
+    <ClCompile Include="..\..\..\examples\hello\app\view\StageView.cpp">
+      <Filter>app\view</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +107,10 @@
     </ClInclude>
     <ClInclude Include="..\..\..\examples\hello\tools\puremvc\pmvcpp.h">
       <Filter>tools\puremvc</Filter>
+    </ClInclude>
+    <ClInclude Include="StageView.h" />
+    <ClInclude Include="..\..\..\examples\hello\app\view\StageView.hpp">
+      <Filter>app\view</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -12,13 +12,13 @@ namespace mvcgame {
     {
 	public:
 		typedef std::function<void(Button*)> ClickedFunc;
-		typedef std::shared_ptr<const Texture> Texture;
+		typedef std::shared_ptr<const Texture> BtnTexture;
     public:
 		Button();
-		Button(Texture normal, Texture light, Texture disable);
+		Button(BtnTexture normal, BtnTexture light, BtnTexture disable);
 	public:
 		void setClickedFunc(ClickedFunc func);
-		void setTexture(Texture normal, Texture light, Texture disable);
+		void setTexture(BtnTexture normal, BtnTexture light, BtnTexture disable);
 		void setEnable(bool b);
 	public:
 		bool isEnable() const;
@@ -29,9 +29,9 @@ namespace mvcgame {
 	private:
 		bool _enable;
 		bool _pressed;
-		Texture _normal;
-		Texture _light;
-		Texture _disable;
+		BtnTexture _normal;
+		BtnTexture _light;
+		BtnTexture _disable;
 		ClickedFunc _click;
     };
 

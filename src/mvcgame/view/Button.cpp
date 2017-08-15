@@ -11,7 +11,7 @@ namespace mvcgame {
 
     }
 
-	Button::Button(Texture normal, Texture light, Texture disable) : Button() {
+	Button::Button(BtnTexture normal, BtnTexture light, BtnTexture disable) : Button() {
 		setTexture(normal, light, disable);
 	}
 
@@ -31,7 +31,7 @@ namespace mvcgame {
 		return _pressed;
 	}
 
-	void Button::setTexture(Texture normal, Texture light, Texture disable) {
+	void Button::setTexture(BtnTexture normal, BtnTexture light, BtnTexture disable) {
 		assert(normal && light && disable);
 		assert(normal->getWidth() == normal->getWidth() && normal->getWidth() == disable->getWidth());
 		assert(normal->getHeight() == normal->getHeight() && normal->getHeight() == disable->getHeight());
